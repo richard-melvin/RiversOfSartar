@@ -3,14 +3,11 @@ VAR1=$(CAT << EOF
 0.0_Credits_&_Legal_Information.md \
 0.1_Legal_Information.md \
 0.2_Credits.md \
-1.0_Introduction.md \
-1.1_Why_Rivers.md \
-1.2_Version.md \
-1.3_Who_Is_This_For.md \
-1.4_Numbering.md \
-1.5_Participants.md \
-2.0_Basic_Mechanics.md \
-2.1_Abilities.md 
+1_Introduction.md \
+2_Basic_Mechanics.md \
+3_Freeform_Gameplay.md \
+4_Tactical_Gameplay.md \
+
 EOF
 )
 
