@@ -6,13 +6,13 @@ goals and the challenges,or threats that your GM presents to stand in your way.
 ## when to roll?
 
 
-Some reasons for adding randomness to a game include:
+Some reasons for using randomness in game mechanics include:
 
 1. characterisation: a party must travel for a day on horseback over open terrain. Perhaps characters who fail a ride test simply have an uncomfortable day. They get a 
   chance to express their discomfort, and perhaps wish they were somewhere else.
 
 1. character selection:  a clue could be discovered by any of several characters. It is likely, but not guaranteed, that the one who does so is the one who has the highest rating in a relevant ability. 
-   Either case provides an opportunity for characterisation, and possibly, if the players goalds are not completely aligned, further plot development.
+   Either case provides an opportunity for characterisation, and possibly, if the players goals are not completely aligned, further plot development.
 
 1. plot branching: a clue might be missed, perhaps placing the party in a dangerous situation they would have preferred to avoid, or requiring them to take a different approach.
 
@@ -25,8 +25,7 @@ Some reasons for adding randomness to a game include:
 If none of these reasons apply, it is likely the situation can be resolved without explicit mechanics or randomness. The PCs simply describe what they do, and the GM narrates what happens next, 
 somehwat in the 'Yes, and' style of improvisational comedy. 
 
-Alternatively, multiple of these purposes can be combind in a single situation, such as when it is possiblke any of several characters might discover a clue, but it is also possible noone will.
-
+Alternatively, multiple of these purposes can be combined in a single situation, such as when it is possible any of several characters might discover a clue, but it is also possible noone will.
 
 Support for the first 5 reasons is provided by section 2, *Freeform Gameplay*.. The last is covered by section 3, *Tactical Gameplay*.
 
@@ -56,7 +55,10 @@ For RQ:G characters, all of these values are on a scale compatible with the dice
 For questworlds characters, all values should be multipled by 5.
 
 
+
 ## what to roll against
+
+The opposition to a roll is on the same scale as PC skills. It can be determined in any of a number of ways:.
 
 1. known value: one established previously, or printed in a published scenario
 
@@ -80,11 +82,21 @@ in other words, ideally the in-world description of the opposition and their mec
 A lowly farmer who fights with godlike skill will be doing so because they are literally inspired by the gods, rather than because the plot demands it. 
 This can still be so, even if it is the case that the plot required that they be so inspired.
 
+## variable levels of success
+
+In normal circumstances, contestants will also roll a single d20 to determine the success level (i.e. check for criticals, specials success and fumbles). 
+Characters that have an active runic inspiration or passion may roll 2 or more.
+
+A contestant that represents purely environment factors, or disintertested characters not actively opposing the PCs (e.g. unalert guards) does not roll a success level d20.
+
+In the case where multiple dice are used, then on a success the best (highest value) dice is used. On a failure, the lowest value D20 is used. 
+This means that acting passionately increase both the chance of great success and great failure.
 
 ## how to roll
 
 All rolls are opposed rolls, between two or more *contestants*. Each contestant simultaneously rolls a single D100 and zero or more D20s.
-The combination of the two dice provides results that are mathematically similar to the RQ:G system, wihtout requiring table lookup or mental arithmetic.
+When a single D20 is used, this provides results that are mathematically similar to the RQ:G system, without requiring table lookup or mental arithmetic. 
+The option of using different numbers of D20 provides an addiional dimension by which different situaitons may be handled in game.
 
 
 ### how to read the D100
@@ -93,11 +105,12 @@ A D100 is rolled in the same way as RQ:G. So if both dice are 0, the result is 1
 
 Values over 96 are treated as 96, over 197 as 97, and so forth. This modified value is the *effective skill*. Any excess skill is referred to as the *tiebreak bonus*, and is used in *decisive rolls* (see below)
 
-Example: a skill is boosted by the Humakti rune magic _sword trance_ to a value of 251%. It has a 97% chance of making a successful roil, and a *tiebreak bonus* of 154.
+> [!NOTE]  
+> A skill is boosted by the Humakti rune magic _sword trance_ to a value of 251%. It has a 97% chance of making a successful roil, and a *tiebreak bonus* of 154.
 
 Given that, a rolled value below or equal to the *effective skill* is counted as a *succesful roll*.
 
-### how to read the D20
+### how to read the D20s
 
 - On a *successful roll*
 
@@ -105,17 +118,27 @@ Given that, a rolled value below or equal to the *effective skill* is counted as
   
   - any roll of 17, 18 or 19 is a *special success*, of value 2.
   
-  - any other valud is a *normal success*, of value 1.
+  - any other value is a *normal success*, of value 1.
+  
+  - if multiple dice are rolled, the highest value is used.
 
-- On a *failed roll*, any roll of 1 is a fumble, of value -1
+- On a *failed roll*
 
+  - any roll of 1 is a *fumble*, of value -1
+  
+  - any other roll is a *normal failure*, of value 0.
+  
+  - if multiple dice are rolled, the lowest value is used.
+  
 
 ### tie break mechanism
 
-Normally, the contestant with the highest number of succcesses would win. Ties can be broken by adding the value rolled and any *tiebreak bonus* the tied contestants have.
+Normally, the contestant with the highest number of succcesses would win. Ties can be broken by adding the value rolled to any *tiebreak bonus* the tied contestants have.
 The contestant with the highest value scores an extra success. 
 
 
+> [!NOTE]  
+> Thus the Humakti with a *tiebreak bonus* of 154 has, all things equal, a very small chance (<10%) of losing to anyone with a merly human-level of skill (< 150).
 
 
 
