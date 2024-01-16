@@ -1,101 +1,121 @@
-## Freeform Gameplay
+# 2.0 Freeform Gameplay
 
 
-In freeform play, the type and sequence of rolls to be made should be based on the logic of the situation, the underlying reason why it is being rolled for, and the need to involve all participatinmg players. For example, for a challenge that takes place 
-at a time known in advance, there is likely time for as many secondary actions as can be thought of. A trial with three witnesses to be presented will be three opposed roll, before a decisive concluding argument. 
-On the other hand, if there is no time pressure or risk, a task might reasonably  be attempted indefinitely 
-until the desired result is achieved. In such cases, it is better to treat the task as automatically successful if there is a non-zero chance of success.
+In freeform play, the rolls to be made should be based on the logic of the situation as it unfolds. Each roll is standalone, in that there are built-in no mechanical consequences for succeeding or failing.
+Instead, success or failure simply changes the situation which must be dealt with.
 
-A contest has two or more opposing *sides*, each of which has one or more *contestants*. A contestant is typically an individual, but may be a closely cooperating group, or environmental factor. 
-PCs will commonly be contestants on the same *side*. But if they are not, then the same rules work. 
+## What to roll?
 
-Only those contestants participating in a given roll are the *involved contestants*. This will commonly not be all the contestant in a contest, and may be only two. 
-For example an archer and a target, or a lawspeaker and a witness. for either, while the results of that roll will contirbute to the success of the battle or trial, only those invloved get to roll
+Rivers of Sartar is based on a set of dice roll mechanics that can be applied in a uniform way to any value on a percatile scale. These include:
 
-In a tactical challenge, additional rules apply to who gets to make what type of roll, and when; see [xxx] for details.
+1. skills
 
-### Types of Roll
+1. runes
 
-A *decisive roll* represents a test to definitively resolve a conflict, determining a winner, using a tie-break mechanism if required. 
-The result indicates what happens, allowing consequences to be applied and the story to move on to whatever happens next.
+1. passions
 
-An *opposed roll* represents a test to see if specific attempt as an individual challenge or task is successful. It is normally part of a larger dequence of tasks, called a *contest*, which will evetually terminate by a *decisive roll*. 
-The consequences of success and failure apply only to the state of that *contest*; an opposed roll that is not part of a contest has no mechanical effect. 
+1. characteristics
 
-A *secondary roll* represents an attempt to inspire, prepare for, assist in, or supervise the performance of a task or challenge.
+1. reputation
 
-Secondary rolls broadly correspond to the RQ:G and QW mechanism of *augments*. They are less consequential than an opposed roll, but may be possible in 
-circumstances, or at a timing, where a full opposed roll is not. 
+1. relationships
 
-Note that as a contest evolves over a sequence of rolls, it is not necessary to commit to any set of possible consequences until the time a decisive roll is called for. 
-So a party may scout a group of unkown raiders in order to evaluate their strength, before comitting to either a skirmish, a full combat, or running away. 
+For RQ:G characters, all of these values are on a scale compatible with the dice rolling mechanism, except characteristics, which should be multipled by 5. 
+For questworlds characters, all values should be multipled by 5.
 
+Typically these values are fixed over the scope of a single game session, and should be recorded on a character sheet as an *ability*. Characters for Rivers of Sartar can be created 
+by any of the methods supported by RQ:G and QuestWorlds.
 
-### opposed roll
-All involved contestants roll D100 and zero or more D20, as described in the previous section. The number of successes each contestant has scored is recorded.
+Note that outside character creation, there is no concept of a 'base skill' in an ability a character does not have. If they do not have an ability, they cannot use it. 
+Instead, they must use a different ability, with corresposdingly different difficulty.
 
 
-### decisive roll
+> [!NOTE]  
+> A character who never learnt to swim cannot use the 'swim' ability at a low chance of success. Instead, they may use a characteristic roll to hold their breath until they are swept to shallow water, hold unto debris until the are rescued, or so on.
+
+In circumstances where it make sense, contestants will also one or more bonus d20 to determine the success level (i.e. check for criticals, specials success and fumbles). 
+Status affacts such as *inspiration* will vary the number of bonus D20 rolled.
 
 
-For a decisive roll, the number of success points scored by each involved contestant are determined in the same way as for an opposed roll.
-
-Then the totals for each contestant on each side are added up and compared. 
-If the final result is an equal number of successes, a tie break rule is applied to all contestants from tied sides to give one side an extra success. 
-
-This involves adding the value rolled and any *tiebreak bonus* the tied contestants have.
-The contestant with the highest value scores an extra success for their side. 
-
-In the rare case that this doesn't produce a winner, the outcome is a *dead heat* and the contest either 
-continues or ends without resolution.
+### Inspiration from Runes and Passions.
 
 
-### secondary roll
+Before attempting a roll, characters may attmpt to become *inspired* by a rune or passion. 
+This involves rolling the corresponding ability against an oppostion set by how appropriate the GM judges the usage to be.
+
+Inspiration lasts for a scene, as defined by the GM.
+
+> [!warning]  Where multiple dice are used, then on a failure, the lowest value D20 is used. This means that acting passionately increase both the chance of great success and great failure.
 
 
-## who gets to roll
+> [!NOTE]  
+> A character who has `Hate Lunars 60%` faces Lunar soldiers attacking their village with intent to destroy it. They face a situational opposition of 0, which means they will automatically succeed in the roll.
+> Facing lunar-aligned civilians, or retreating soldiers, would require a roll against a higher opposition.
+
+For guidelines on what the runes represent and can be used for, see RQ:G. Runic inspiration is a form of magic, and so requires cult initiation, or an equivalent form of access to a source of magical power.
+Inspiration by a passion does not.
+
+An ability may not be used to inspire itself. 
+
+> [!NOTE]  
+> An orlanthi wants to cast thier cult rune magic. If the storm rune will be used for the casting, then some other cult rune, like movement should be used for inspiration.
+
+The roll to attempt inspiration does not have a variable level of success, and so does not itself use a bonus D20.
+
+
+## What to Roll Against
+
+
+The opposition to a roll is on the same scale as PC skills. It can be determined in any of a number of ways:.
+
+1. known value: one established previously, or printed in a published scenario
+
+1. estimated difficulty: one estimated based on similar examples
+
+1. narratively appropriate value: one necessary to support the reasons for making this roll in the first place.
+
+1. circumstantial disadvantages: darkness, injury and so on
+
+1. zero: having zero as a possible opposition simplfies the rules by dropping the need for unnposed rolls
+
+
+The value chosen is the *opposition value*: a number at least 0, and typically under a hundred. 
+An opposition vaue of 200 or more is unlikely to be directly overcome by a normal group of PCs.
+
+Note that the case the opposition value is chosen for narrative raasons, the description of what is happenning should be adjusted correspondingly. 
+For example, if the GM expects  the players to probably be captured, but not rule out the possibility of escape, then a high but not unbeatable 
+opposiiton should be chosen. This should then be _described_ as an approprate number of well armed and competent opponents.
+
+In other words, ideally the in-world description of the opposition and their mechanical rating should generally match, by whatever method the two are selected. 
+A lowly farmer who fights with godlike skill will be doing so because they are literally inspired by the gods, rather than because the plot demands it. 
+This can still be so, even if it is the case that the plot required that they be so inspired.
+
+
+A contestant that represents purely environment factors, or disinterested characters not actively opposing the PCs (e.g. unalert guards) does not roll a bonus dice.
 
 
 
-### example contests
+## what happens next
 
-1. hard days riding
-
-1. background knowledge
-
-1. spotting a clue
-
-1. fighting off raiders
-
-1. humakti duel
-
-## who wins
-
-By default, a contest ends immediately after a *decisive roll*. 
-The contestant with the most successes wins, if there is one. 
+Success or failure of a roll so will simply determine what happens next, according to the judgement of the gm. This will normally involve chnages tothe circumstaces of the sitation, and so the oppisition and bonus die used on future rools.
 
 
-Howeer, any loser of a contest may take *consequences*
+> [!NOTE]  
+> A PC fails badly while attempting to stealthily scout the camp of a large hosatile warband. The enemy is now alerted, so any attempts to fight them all would face a challenging or impossible level of opposition. Running away, neotiating, or just surrendering will all likely still be achievable.
 
 
-## who walks away
-
-### damage
-
-### resource depletion
-
-# Tactical Challenge Mechanics
-
-## Engagement
-
-## Strike rank advantage
+Greater levels of success, achieved from rolling well on the bonus dice, simply correspond to greater changes to the siuation..
 
 
 
-# heroquests
+> [!NOTE]  
+> A PC rolls a critical success while attempting to stealthily scout the above camp. They get to the middle of the enemy camp wihtout the guards being aletered. So they may attempt to poision supplies, burn tents, assasinate or negotiate with leaders. 
 
-# Character Creation
 
-## Runequest:Glorantha 
 
-## RQuestworlds 
+In freeform gameplay a character who become wounded simply finds future opposition values to be higher than they would otherwise being, 
+representing the GMs judgment of how much thier wounds affect what they are trying to do. 
+
+A player character will never normally die in freeform gameplay. However, if the player descrfibes their actions as a heroic sacrifice resulting in their death, the gm will likely select an appriately lower opposition to roll against.
+
+
