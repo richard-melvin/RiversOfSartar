@@ -1,7 +1,7 @@
 # 2.0 Freeform Gameplay
 
 
-In freeform play, the rolls to be made should be based on the logic of the situation as it unfolds. Each roll is standalone, in that there are built-in no mechanical consequences for succeeding or failing.
+In freeform play, the rolls to be made should be based on the logic of the situation as it unfolds. Each roll is standalone, in that there are no built-in mechanical consequences for succeeding or failing.
 Instead, success or failure simply changes the situation which must be dealt with.
 
 ## What to roll?
@@ -27,7 +27,7 @@ Typically these values are fixed over the scope of a single game session, and sh
 by any of the methods supported by RQ:G and QuestWorlds.
 
 Note that outside character creation, there is no concept of a 'base skill' in an ability a character does not have. If they do not have an ability, they cannot use it. 
-Instead, they must use a different ability, with corresposdingly different difficulty.
+Instead, they must use a different ability, perhaps with corresposdingly different difficulty.
 
 
 > [!NOTE]  
@@ -40,12 +40,12 @@ Status affacts such as *inspiration* will vary the number of bonus D20 rolled.
 ### Inspiration from Runes and Passions.
 
 
-Before attempting a roll, characters may attmpt to become *inspired* by a rune or passion. 
+Before attempting a roll, contestants may attmpt to become *inspired* by a rune or passion. 
 This involves rolling the corresponding ability against an oppostion set by how appropriate the GM judges the usage to be.
 
 Inspiration lasts for a scene, as defined by the GM.
 
-> [!warning]  Where multiple dice are used, then on a failure, the lowest value D20 is used. This means that acting passionately increase both the chance of great success and great failure.
+> [!warning]  When inspired, but fails the opposed ability roll, the lowest value D20 is used. This means that acting passionately increase both the chance of great success and great failure.
 
 
 > [!NOTE]  
@@ -62,6 +62,34 @@ An ability may not be used to inspire itself.
 
 The roll to attempt inspiration does not have a variable level of success, and so does not itself use a bonus D20.
 
+### Gaining Circumstantial Advantages and Avoiding Disvantages
+
+In freeform play, granting *advantages* and *disadvantages* is at the discretion of the GM. 
+These should reflect things that change dynamically during the course of play, not static features of the character or opposition.
+
+Examples would include:
+
+- in combat, being able to see when your opponent can not is an *advantage*
+
+- tring to argue a legal case in a language with which you are not fluent is a *disadvantage*
+
+- firing a bow from a moving horse is a *disadvantage*
+
+Disadvantages can commonly be cancelled out by making an appropriate opposed skill roll. Advantages are somewhat harder to gain, usually requiring either clever 
+play, making use of the environment, or magic.
+
+Any roll to gain an advantage, or clear a disadvantage, does not have a variable level of success, and so does not itself use a bonus D20.
+
+
+### Effects of Magic in freeform play
+
+Thes rules uses the same spell list as RQ:G, as decribed the Red Book of Magic and other supplements.
+RQ:G spells that have a mechanical effect that carries over directly into these rules, such as raising a skill or characteristic, have the same effect here too. 
+Others have effects that are described in real-world terms, such as being able to see in the dark, or effect mechanics not present in the freedorm rules, such as weapon damaage.
+ 
+These will effect whether circumstantial advantages or disadvantages are in play. For example, a succesful ride roll will allow a contestant to fire a bow from horseback wihout 
+disadvantage for the rest of the scene.
+
 
 ## What to Roll Against
 
@@ -73,8 +101,6 @@ The opposition to a roll is on the same scale as PC skills. It can be determined
 1. estimated difficulty: one estimated based on similar examples
 
 1. narratively appropriate value: one necessary to support the reasons for making this roll in the first place.
-
-1. circumstantial disadvantages: darkness, injury and so on
 
 1. zero: having zero as a possible opposition simplfies the rules by dropping the need for unnposed rolls
 
@@ -91,7 +117,8 @@ A lowly farmer who fights with godlike skill will be doing so because they are l
 This can still be so, even if it is the case that the plot required that they be so inspired.
 
 
-A contestant that represents purely environment factors, or disinterested characters not actively opposing the PCs (e.g. unalert guards) does not roll a bonus dice.
+A contestant that represents purely environment factors, or disinterested characters not actively opposing the PCs (e.g. unalert guards) does not roll a bonus dice. 
+Significant opponents who have an obvious reason why what they are doing is deeply important to them may be treated as inspired.
 
 
 
