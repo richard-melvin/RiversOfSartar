@@ -1,4 +1,4 @@
-# 2.0 Freeform Gameplay
+# 3.0 Freeform Gameplay
 
 
 In freeform play, the rolls to be made should be based on the logic of the situation as it unfolds. Each roll is standalone, in that there are no built-in mechanical consequences for succeeding or failing.

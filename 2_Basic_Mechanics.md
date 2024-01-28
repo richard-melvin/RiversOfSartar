@@ -55,18 +55,23 @@ The option of using different numbers of bonus D20 provides an additional dimens
 
 The success D100 is rolled in the same way as RQ:G. So if both dice are 0, the result is 100.
 
-Ability values over 96 are treated as 96, 197 or more `+as 97, and so forth. This modified value is the *effective ability*. Any excess skill is referred to as the *tiebreak bonus*, used in the tiebreak mechanism described below.
-
-> [!NOTE]  
-> A skill is boosted by the Humakti rune magic _sword trance_ to a value of 251%. It has a 97% chance of making a successful roil, and a *tiebreak bonus* of 154.
+Ability values over 96 are treated as 96, 150 or more as 97, and so forth, up to a maximum of 99%. This modified value is the *effective ability*. 
 
 Given that, a rolled value below or equal to the *effective ability* is counted as a *succesful roll*.
 
 ### how to read the D20 donus dice
 
+Every 10 ability points over 100 grants a *critical bonus* of +1. This makes special and critical results more likely. 
+
+> [!NOTE]  
+> A skill is boosted by the Humakti rune magic _sword trance_ to a value of 251%. They have a 99% chance of making a successful roil, and a *critical bonus* of 15.
+> RoS does not use the RQ:G mechanism of high skills reducing the opposing value, as no futher penalties will be reuqired to end the fight quickly.
+
 - On a *successful roll*
 
-  - a roll of 20 is a *critical*, of value 3
+  - add any *critical bonus* to the value rolled
+
+  - a roll of 20 or more is a *critical*, of value 3
   
   - a roll of 17, 18 or 19 is a *special success*, of value 2.
   
@@ -81,12 +86,9 @@ Given that, a rolled value below or equal to the *effective ability* is counted 
 
 ### tie break mechanism
 
-Normally, the contestant with the highest number of succcesses would win. Ties can be broken by adding the value rolled to any *tiebreak bonus* the tied contestants have.
+Normally, the contestant with the highest number of succcesses would win. Ties can be broken by looking at D100 value rolled.
 The contestant with the highest value scores an extra success. 
 
-
-> [!NOTE]  
-> Thus the Humakti with a *tiebreak bonus* of 154 has, all things equal, a very small chance (<10%) of losing to anyone with a merly human-level of skill (< 150).
 
 
 

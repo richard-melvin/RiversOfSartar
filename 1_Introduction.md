@@ -24,7 +24,7 @@ It is always *fast-handling*, in that it requires almost no arithmetic, table lo
 
 It starts from a baseline of storytelling, in a way that also allows elements of world-simulation and simple tactical gameplay to be added as desired.
 
-it does not have the ambition of being a complete publishable game line, instead referencing sections and supplements from RQ:G and Questworlds as appropriate.
+It does not have the ambition of being a complete publishable game line, instead referencing sections and supplements from RQ:G and Questworlds as appropriate.
 
 ### Inspirations
 
@@ -42,15 +42,11 @@ This is currently an unreleased draft.
 
 ## 1.3 Who Is This Document For
 
-The primary audience for this document is Game Masters who want to run a QuestWorlds-style game using the world supplments published for Runequest:Glorantha.
+The primary audience for this document is Game Masters who want to run a QuestWorlds-style game using the world supplements published for Runequest:Glorantha.
 
 ## 1.4 Numbering
 
-Sections within this document are numbered. This is for the benefit of game designers and reviewers.
-
-This does not imply that game designers need number the rules in their own games.
-
-Numbering however makes it easy to refer to rules in this document when page numbers may vary by presentation format for the purposes of error trapping or tracking changes. If you need to give us feedback about this document, that will assist us.
+Sections within this document are numbered as it currently an online-only document and sop has no page numbers. 
 
 ## 1.5 Participants
 

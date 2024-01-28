@@ -1,8 +1,17 @@
-## Freeform Gameplay
+# 4.0 Structured Gameplay
+
+In structured play, a sequence of rolls are used to *resolve* a single contest, and determine the *consequences* of victory or defeat. 
+Compared to freeform gameplay, within that contest, additional rules and guidelines apply, and so the need for GM fiat is somewhat lessened. 
+
+A contest normally ends with a *decisive roll*, at which time there will be a number of *consequences* to apply to both sides. 
+A PC may *reject* the result of a decisive roll, normally because they lost. If they do, the contest continues, but they must immediately apply the consequences determined so far. 
 
 
-In freeform play, the type and sequence of rolls to be made should be based on the logic of the situation, the underlying reason why it is being rolled for, and the need to involve all participatinmg players. For example, for a challenge that takes place 
-at a time known in advance, there is likely time for as many secondary actions as can be thought of. A trial with three witnesses to be presented will be three opposed roll, before a decisive concluding argument. 
+### Contest Resolution
+
+
+Within a contest, the type and sequence of rolls to be made should be based on the logic of the situation, the underlying reason why it is being rolled for, and the need to involve all participatinmg players. For example, for a challenge that takes place 
+at a time known in advance, there is likely time for as many secondary actions as can be thought of. A trial with three witnesses to be presented will be three opposed rolls, before a decisive concluding argument. 
 On the other hand, if there is no time pressure or risk, a task might reasonably  be attempted indefinitely 
 until the desired result is achieved. In such cases, it is better to treat the task as automatically successful if there is a non-zero chance of success.
 
@@ -10,9 +19,9 @@ A contest has two or more opposing *sides*, each of which has one or more *conte
 PCs will commonly be contestants on the same *side*. But if they are not, then the same rules work. 
 
 Only those contestants participating in a given roll are the *involved contestants*. This will commonly not be all the contestant in a contest, and may be only two. 
-For example an archer and a target, or a lawspeaker and a witness. for either, while the results of that roll will contirbute to the success of the battle or trial, only those invloved get to roll
+For example an archer and a target, or a lawspeaker and a witness. For either, while the results of that roll will contribute to the success of the battle or trial, only those invloved get to roll
 
-In a tactical challenge, additional rules apply to who gets to make what type of roll, and when; see [xxx] for details.
+In a tactical challenge, additional rules apply to who gets to make what type of roll, and when; see the next section for details.
 
 ### Types of Roll
 
@@ -28,29 +37,32 @@ Secondary rolls broadly correspond to the RQ:G and QW mechanism of *augments*. T
 circumstances, or at a timing, where a full opposed roll is not. 
 
 Note that as a contest evolves over a sequence of rolls, it is not necessary to commit to any set of possible consequences until the time a decisive roll is called for. 
-So a party may scout a group of unkown raiders in order to evaluate their strength, before comitting to either a skirmish, a full combat, or running away. 
+So a party may scout a group of unknown raiders in order to evaluate their strength, before comitting to either a skirmish, a full combat, or running away. 
 
 
-### opposed roll
-All involved contestants roll D100 and zero or more D20, as described in the previous section. The number of successes each contestant has scored is recorded.
+#### Opposed roll
+All involved contestants roll a D100 and zero or more D20, as described in the previous section. The number of successes each contestant has scored is recorded.
 
 
-### decisive roll
-
+#### Decisive roll
 
 For a decisive roll, the number of success points scored by each involved contestant are determined in the same way as for an opposed roll.
 
 Then the totals for each contestant on each side are added up and compared. 
 If the final result is an equal number of successes, a tie break rule is applied to all contestants from tied sides to give one side an extra success. 
 
-This involves adding the value rolled and any *tiebreak bonus* the tied contestants have.
-The contestant with the highest value scores an extra success for their side. 
+This means the contestant with the highest value scores an extra success for their side. 
 
-In the rare case that this doesn't produce a winner, the outcome is a *dead heat* and the contest either 
+In the rare case that this doesn't produce a winner, the outcome is a *dead heat*. The contest either 
 continues or ends without resolution.
 
 
-### secondary roll
+### Secondary Roll
+
+For a secndary roll, the number of success points scored by each involved contestant are determined in the same way as for an opposed roll, expcept that he final
+
+
+
 
 
 ## who gets to roll
