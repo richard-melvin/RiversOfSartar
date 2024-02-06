@@ -1,0 +1,74 @@
+
+@startmindmap
+
+*ability
+**skills
+**runes
+**passions
+**characteristics
+**reputation
+**relationships
+
+
+@endmindmap
+
+
+
+@startmindmap
+
+*[#lightblue] contestant 
+** d100
+*** success
+*** failure
+** d20
+*** critical
+*** special
+*** success
+*** failure
+*** fumble
+-- status
+--- advantage
+--- disadvantage
+--- inspired
+--- inactive
+
+
+@endmindmap
+
+@startmindmap
+
+*[#lightblue] contest
+
+** opposed rolls
+*** decisive roll
+**** tiebreak
+*** task roll
+*** status roll
+
+-- side
+--- contestant
+
+@endmindmap
+
+@startmindmap
++ rejection
+
+++ [#lightblue]resource
+
++++ magic points
+++++ meditate
++++ rune points
+++++ worship
++++ money
+++++ profession
++++ gear
+++++ money
++++ social status
+++++ loyalty
++++ followers
+++++ reputation
+
+++ lethal
+
+
+@endmindmap
