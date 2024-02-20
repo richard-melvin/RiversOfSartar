@@ -1,0 +1,45 @@
+@startuml
+skinparam componentstyle rectangle
+
+
+
+title Primordial Clan
+
+
+component "Temple" as cult 
+
+component "Shrine" as shrine
+
+
+component "Chief Priest" as chief
+
+
+
+
+cloud wyter
+
+cloud "Greater\nDeity" as deity
+
+cloud "Minor\nDeity" as sub
+
+
+cloud "Godplane Home" as home
+
+
+cult <-- chief: runs
+
+
+wyter ..> cult: community\nspirit
+
+wyter ..> home: bridge to
+
+
+home <.. deity : owns
+
+home <. sub: lives at
+
+cult -> shrine: contains
+
+deity <- chief: of
+
+@enduml

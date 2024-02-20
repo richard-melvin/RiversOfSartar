@@ -1,7 +1,55 @@
 @startuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+skinparam componentstyle rectangle
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: Another authentication Response
+component "PC" as character #lightblue
+
+component "Tribe" as tribe {
+
+component "Clan" as clan
+}  
+
+component "Homeland" as homeland
+
+component "Rune Cult" as cult 
+
+component spell [
+Rune Spell
+---
+resuable?]
+
+component pool [
+Rune Pool
+---
+size]
+
+component "Subcult" as subcult
+
+cloud "Subordinate Cult" as subord
+
+pool <-- spell : cast from
+
+
+character -> cult: worships
+
+character --> subcult: taught by
+
+
+cult <-- subcult : aspect of
+
+cult <-- subord: aspect of
+
+cult <-> cult: cult\nassociation
+
+
+
+
+
+cult --> spell : supplies
+
+character --> pool: has
+
+clan <-- character : born into
+
+clan -> homeland : located in
+
 @enduml
