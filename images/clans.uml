@@ -3,43 +3,271 @@ skinparam componentstyle rectangle
 
 
 
-title Primordial Clan
+title Valind Clan
+
+frame Rules {
+
+storage cult [
+Rune Cult
+---
+Valind
+]
+
+storage "Rune Priest" as rank
 
 
-component "Temple" as cult 
+}
+
+frame "Mundane World" {
+actor "Chieftan" as chief
+
+component clan  #lightblue
+}
+
+frame Otherworld {
+
+cloud wyter
+
+cloud "Valind" as deity
+
+}
+
+clan--> chief: led by
+
+
+wyter <. clan: community\nspirit
+
+wyter ..> deity: bridge to
+
+
+
+deity <- chief: worships
+
+
+wyter --> chief : bound to
+
+clan <. cult: described by
+
+chief <. rank: described by
+
+cult <-- rank: rank of
+
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+@startuml
+skinparam componentstyle rectangle
+
+
+
+
+title Asrelian Great Temple 
+
+frame Rules {
+
+storage cult [
+Rune Cult
+---
+Asrelia
+]
+
+storage subcult [
+Subordinate Cult
+---
+Aleshmara
+]
+
+cult <-- subcult: part of
+
+}
+
+frame "Mundane World" {
+
+component clan #lightblue [
+Great Temple
+---
+Asrelia
+]
+
+
+
+actor "High\nPriestess" as chief
+
+actor "Specialist\nPriestess" as godtalker
 
 component "Shrine" as shrine
+}
 
+frame Otherworld {
 
-component "Chief Priest" as chief
-
-
+cloud "Otherworld\nHome" as home
 
 
 cloud wyter
 
-cloud "Greater\nDeity" as deity
+cloud "Major\nDeity" as deity
 
-cloud "Minor\nDeity" as sub
+cloud "Minor\nDeity" as minor
 
+}
 
-cloud "Godplane Home" as home
-
-
-cult <-- chief: runs
+clan--> chief: led by
 
 
-wyter ..> cult: community\nspirit
+wyter <. clan: community\nspirit
 
 wyter ..> home: bridge to
 
 
-home <.. deity : owns
 
-home <. sub: lives at
+deity <- chief: worships
 
-cult -> shrine: contains
 
-deity <- chief: of
+wyter --> chief : bound to
+
+clan--> shrine : contains
+
+
+deity <-- godtalker : worships
+
+minor <- godtalker : worships
+
+home <.. minor : lives at
+
+home <. deity: owns
+
+shrine <-- godtalker : tends
+
+chief <-- godtalker : reports to
+
+
+clan <. cult : described by
+shrine <. subcult : described by
+
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+@startuml
+skinparam componentstyle rectangle
+
+
+
+title Orlanth Thunderous Clan
+
+
+frame "Mundane World" {
+
+component "Clan" as clan #lightblue
+
+component "Storm\nTemple" as cult1 
+
+component "Earth\nTemple" as cult2 
+
+
+clan --> cult1 : has
+clan --> cult2 : has
+
+
+actor "Chieftan" as chief
+
+
+component "Shrine" as shrine
+
+}
+
+frame Otherworld {
+
+cloud "Otherworld\nHome" as home
+
+
+cloud wyter
+
+cloud "Orlanth" as deity
+
+cloud "Ernalda" as minor
+
+}
+
+deity .> minor : married to
+
+clan--> chief: led by
+
+
+wyter <. clan: community spirit
+
+home<. wyter: bridge to
+
+
+
+
+wyter --> chief : bound to
+
+cult1 -> shrine : share
+shrine <- cult2 : share
+
+
+
+home <.. minor : lives at
+
+home <.. deity:  lives at
+
+frame Rules {
+
+storage  subcult1 [
+Subcult
+---
+Orlanth
+Thunderous
+]
+
+
+storage runecult2 [
+Rune Cult
+---
+Ernalda
+]
+
+
+storage "Chief Priest" as cp
+
+subcult1 <-> runecult2: cult association
+
+storage runecult [
+Rune Cult
+---
+Orlanth
+]
+
+
+subcult1 --> runecult : variant of
+
+cp --> runecult: rank of
+
+}
+cult1 ..> subcult1 
+cult2 ..> runecult2
+
+chief ..> cp 
 
 @enduml

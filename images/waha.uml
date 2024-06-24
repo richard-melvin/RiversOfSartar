@@ -1,0 +1,62 @@
+@startuml
+skinparam componentstyle rectangle
+skinparam actorStyle Hollow 
+
+
+title Waha Tribe 
+
+frame Rules {
+
+storage "Waha" as cult
+
+
+storage "Khan" as rank
+
+rank --> cult: rank of
+
+
+}
+
+frame "Mundane World" {
+actor "Tribal Khan" as chief
+
+component tribe #lightblue
+
+collections clans
+
+
+collections clans
+
+
+tribe --> clans : split into
+
+
+chief --> tribe : rules
+
+
+}
+
+
+frame Otherworld {
+
+cloud "Founder" as wyter
+
+cloud "Waha" as deity
+
+deity <- wyter : descendant of
+
+}
+
+
+
+
+wyter <.. chief : call founder
+
+
+deity <. chief : worships
+
+chief .> rank : described by
+
+
+
+@enduml

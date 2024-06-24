@@ -1,0 +1,68 @@
+@startuml
+skinparam componentstyle rectangle
+skinparam actorStyle Hollow 
+
+
+title Orlanth Rex Tribe 
+
+frame Rules {
+
+storage "Orlanth" as cult
+
+
+storage "Orlanth Rex" as subcult 
+
+
+cult <-- subcult : variant of
+
+
+
+}
+
+frame "Mundane World" {
+actor "Tribal King" as chief
+
+component tribe #lightblue
+
+collections clans
+
+component "Orlanth Rex\nTemple" as temple
+
+collections clans
+
+collections "Tribal Temples" as temples
+
+tribe <-- clans : supports
+
+tribe -> temples : has
+
+chief --> tribe : rules
+
+chief <- temple: anoints
+
+}
+
+
+frame Otherworld {
+
+cloud "Guardian Spirit" as wyter
+
+cloud "Orlanth" as deity
+
+deity <- wyter : worships
+
+}
+
+
+
+temple <. subcult: described by
+
+wyter <.. chief : ally
+
+temple --> temples : one of
+
+
+deity <. chief : worships
+
+temples <-- clans : have\naccess to
+@enduml
