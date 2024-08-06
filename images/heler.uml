@@ -1,0 +1,80 @@
+
+
+
+@startuml
+skinparam componentstyle rectangle
+
+
+
+title Heler Rain Sword Warband
+
+
+frame "Mundane World" {
+
+component "warband" as clan #lightblue
+
+component "Heler\nTemple" as cult
+
+
+
+clan --> cult : has
+
+
+actor "Rune Lord" as chief
+
+
+
+}
+
+frame Otherworld {
+
+
+
+cloud wyter
+
+cloud "Heler" as deity
+
+
+}
+
+
+clan--> chief: led by
+
+
+wyter <. clan: community spirit
+
+deity<. wyter: bridge to
+
+
+
+wyter --> chief : bound to
+
+
+
+
+frame Rules {
+
+storage  subcult [
+Subcult
+---
+Heler Rain Blade
+]
+
+
+
+
+storage runecult [
+Rune Cult
+---
+Heler
+]
+
+
+subcult --> runecult : variant of
+
+
+}
+cult ..> subcult
+
+
+@enduml

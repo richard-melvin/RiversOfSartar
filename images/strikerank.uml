@@ -1,0 +1,51 @@
+@startuml
+manual time-axis
+mode compact
+
+concise "Defend" as D
+concise "Attack" as A
+
+concise "Move" as MV
+
+concise "Magic" as MG
+
+concise "Magic" as MG
+
+concise "Prepare" as PR
+
+@0
+D is Parry
+A is "DEX SR 2"
+MV is "3M"
+MG is "1 MP"
+
+PR is "5 SR"
+
+@1
+MV is {hidden}
+MG is {hidden}
+
+@2
+A is "SIZ SR 2"
+
+@3
+
+@4
+A is "Weapon SR 3"
+
+@5
+PR is {hidden}
+
+
+@7
+A is {hidden}
+
+@8
+
+
+@12 
+
+D is {hidden}
+A is {hidden}
+
+@enduml
