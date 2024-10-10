@@ -1,0 +1,297 @@
+@startuml
+skinparam componentstyle rectangle
+
+
+skinparam actorStyle Hollow 
+
+
+
+frame Legend {
+
+
+actor Cult #black
+
+actor Subcult
+
+actor Hero #darkgrey
+
+circle "Celestial Body" as body
+
+rectangle Location #lightgrey
+
+rectangle "Otherside\nLocation" as other
+
+hexagon Event
+
+
+
+
+Cult -[hidden] Subcult
+
+Subcult -[hidden] Hero
+
+Location -[hidden] other
+
+Cult -[hidden]- body
+
+Cult -[hidden]- Event
+
+Location -[hidden]- Cult
+
+}
+
+
+
+frame "Monrogh Doctrine"  {
+
+
+
+circle Sun
+
+circle Lightfore
+
+
+actor Yelm #black
+
+actor Yelmalio #black
+
+actor Ernalda #black
+
+actor Aldrya #black
+
+actor Vrimak #black
+
+
+actor Monrogh #darkgrey
+
+actor Kuschile #darkgrey
+
+
+hexagon Death
+
+hexagon Birth
+
+hexagon Childhood 
+
+hexagon Marriage
+
+hexagon Dawn
+
+hexagon Travels
+
+hexagon "First Challenge" as fight1
+
+hexagon "Second Challenge" as fight2
+
+hexagon "Third Challenge" as fight3
+
+
+Death --> Birth
+
+Birth --> Childhood
+
+Childhood --> Travels
+
+Travels --> fight1
+
+fight1 --> fight2
+
+fight2 --> fight3
+
+fight3 --> Marriage
+
+
+Marriage -- Dawn
+
+Ernalda . Marriage
+
+rectangle "Imperial Palace" as palace
+
+Vrimak .le. Death
+rectangle "Hill of Gold" as hill
+
+palace - Childhood
+
+hill - fight1
+
+
+Dawn -- Monrogh
+Dawn -- Kuschile
+
+}
+
+
+
+actor Elmal
+
+actor Antirius
+
+actor Khelmal
+
+actor Orlanth #black
+
+actor Hippoi #black
+
+actor Kargzant
+
+actor Tharkantus
+
+actor Avivorus #black
+
+actor Gamara
+
+actor "Balazar" as BelazarHero #darkgrey
+
+circle "Broken Ring" as ring
+
+actor Nolerianmar #darkgrey
+
+Sun - Yelm
+
+Lightfore - Yelmalio
+
+Yelm . Death
+
+Yelmalio - Birth
+
+Birth - Kargzant
+
+Childhood - Antirius
+
+Aldrya . Travels
+
+Travels - Tharkantus
+
+fight1 - Elmal
+
+Elmal .. Orlanth
+
+Elmal .. Hippoi
+
+fight3 - Khelmal
+
+Orlanth .. Khelmal
+
+Orlanth - ring
+
+Avivorus .. Antirius
+
+
+rectangle Pent #lightgrey
+Kargzant - Pent
+Gamara .. Kargzant
+
+rectangle "Dara Happa" as dara #lightgrey
+Antirius - dara
+
+
+rectangle Balazar #lightgrey
+Tharkantus - Balazar
+Balazar - BelazarHero
+
+rectangle "Dragon Pass" as dp #lightgrey
+Elmal - dp
+
+
+
+
+rectangle Imther #lightgrey
+Khelmal - Imther
+
+
+
+
+rectangle Esrolia #lightgrey
+Nolerianmar - Esrolia
+
+Marriage - Nolerianmar
+
+Hippoi .. Nolerianmar
+
+
+rectangle Vanch #lightgrey
+actor Heliacal
+
+Heliacal -- fight2
+Vanch - Heliacal
+
+@enduml
+
+
+@startuml
+skinparam componentstyle rectangle
+
+title Sun and Horse Gids
+
+skinparam actorStyle Hollow 
+
+
+circle Sun
+
+rectangle Pent #lightgray
+rectangle Ralios #lightgrey
+rectangle Saird #lightgrey
+rectangle "Dragon Pass" as pass #lightgrey
+
+rectangle  Prax #lightgrey
+
+
+
+actor Yelm #black
+
+Sun -- Yelm
+
+actor "Yu Kargzant" as yuka 
+
+Yelm -- yuka
+
+actor Ehilm
+
+Yelm -- Ehilm
+
+
+
+yuka -- Pent
+
+
+Ehilm -- Ralios
+
+
+actor Hippoi #black
+
+actor Redaylda 
+Saird -- Redaylda
+Redaylda -- Hippoi
+
+actor Gamara
+Pent -- Gamara
+
+actor Yamsur #black
+Yamsur .. Prax
+Sun --- Yamsur
+
+actor Arandayla
+pass -- Arandayla
+Arandayla -- Hippoi
+
+Gamara -- Hippoi
+
+actor Galanin #black
+Sun --- Galanin
+Galanin -- Ralios
+
+actor Galana
+Ralios -- Galana
+
+Galana -- Hippoi
+
+
+
+rectangle Vanch #lightgrey
+actor Helical #lightgrey
+
+@enduml
+
+actor Calyz
+rectangle Kralorela #lightgrey
+

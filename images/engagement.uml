@@ -1,0 +1,56 @@
+@startuml
+skinparam componentstyle rectangle
+skinparam actorStyle Hollow 
+
+rectangle Before {
+
+
+actor "Broo #1" as npc1
+actor "Broo #2" as npc2
+actor "Broo #3" as npc3
+
+
+cloud combat
+
+npc1 <--> combat
+npc2 <--> combat
+npc3 <--> combat
+
+actor "PC #1" as pc1
+actor "PC #2" as pc2
+actor "NPC ally" as ally1
+
+
+combat <--> pc1
+combat <--> pc2
+combat <--> ally1
+
+}
+
+
+rectangle After {
+
+
+actor "Broo #1" as npc1a
+actor "Broo #2" as npc2a
+actor "Broo #3" as npc3a
+
+
+actor "PC #1" as pc1a
+actor "PC #2" as pc2a
+actor "NPC ally" as ally1a
+
+
+npc1a <--> pc1a
+
+npc2a <--> pc1a
+npc3a <--> pc2a
+
+pc2a -[hidden]- ally1a
+
+}
+
+
+Before --> After: Engagement
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+repeat
+
+:Statement of Intent;
+
+:Movement of Unengaged Characters;
+
+repeat while (next PC?) is (yes) not (no)
+
+:Resolution of Melee, Missiles, and Spells;
+
+repeat
+
+:Bookkeeping;
+
+repeat while (next PC?) is (yes) not (no)
+
+@enduml

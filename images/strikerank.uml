@@ -1,41 +1,120 @@
 @startuml
+
+
+
+
+actor "Broo #1" as npc1
+actor "Broo #2" as npc2
+
+
+actor "PC #1" as pc1
+
+
+npc1 <--> pc1
+
+npc2 <--> pc1
+
+
+@enduml
+
+
+@startuml
+manual time-axis
+mode compact
+
+
+concise "PC #1" as PC1
+concise "Broo #1" as B1
+concise "Broo #2" as B2
+
+@0
+
+PC1 is "SR 5"
+B1 is "SR 6"
+B2 is "SR 6"
+
+
+@1
+
+@2
+
+@3
+
+@4
+
+
+@5
+PC1 -> B1 : attack
+
+PC1 is {hidden}
+
+@6
+
+PC1 -> B2 : defend
+B1 is {hidden}
+B2 is {hidden}
+
+
+@12
+@enduml
+
+
+
+
+
+
+
+@startuml
 manual time-axis
 mode compact
 
 concise "Defend" as D
-concise "Attack" as A
+concise "Melee Attack" as A
+
+concise "Missile Attack" as MA
 
 concise "Move" as MV
 
-concise "Magic" as MG
+concise "Spirit Magic Attack" as SMA
 
-concise "Magic" as MG
+concise "Other Magic" as MG
 
 concise "Prepare" as PR
 
 @0
 D is Parry
-A is "DEX SR 2"
-MV is "3M"
-MG is "1 MP"
+A is "DEX SR"
+MA is "DEX SR"
+
+MV is "+3M"
+MG is "<=2 MP"
+SMA is "DEX SR"
 
 PR is "5 SR"
 
 @1
 MV is {hidden}
-MG is {hidden}
+MG is "+1 MP"
+
 
 @2
-A is "SIZ SR 2"
+A is "SIZ SR"
+MA is "Weapon SR"
+
+MG is {hidden}
+SMA is "<=2 MP "
 
 @3
+SMA is "+1 MP"
 
 @4
-A is "Weapon SR 3"
+A is "Weapon SR"
+SMA is {hidden}
+
 
 @5
+MA is {hidden}
 PR is {hidden}
-
 
 @7
 A is {hidden}
