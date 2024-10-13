@@ -1,4 +1,12 @@
+
 @startuml
+listfonts
+@enduml
+
+@startuml
+
+skinparam defaultFontName Glorantha Core Runes
+
 skinparam componentstyle rectangle
 
 
@@ -11,17 +19,13 @@ frame Legend {
 
 actor Cult #black
 
-actor Subcult
+actor Subcult<<Location>>
 
-actor Hero #darkgrey
+actor Hero<<Location>> #darkgrey
 
 circle "Celestial Body" as body
 
-rectangle Location #lightgrey
-
-rectangle "Otherside\nLocation" as other
-
-hexagon Event
+hexagon Event<<Location>>
 
 
 
@@ -30,15 +34,21 @@ Cult -[hidden] Subcult
 
 Subcult -[hidden] Hero
 
-Location -[hidden] other
 
 Cult -[hidden]- body
 
 Cult -[hidden]- Event
 
-Location -[hidden]- Cult
 
 }
+
+@enduml
+
+@startuml
+skinparam componentstyle rectangle
+
+
+skinparam actorStyle Hollow 
 
 
 
@@ -67,28 +77,27 @@ actor Monrogh #darkgrey
 actor Kuschile #darkgrey
 
 
-hexagon Death
+hexagon "Dismemberment" as Death
 
-hexagon Birth
 
-hexagon Childhood 
+hexagon Childhood<<Imperial Palace>>
 
-hexagon Marriage
+hexagon Marriage<<Ernaldela>>
 
 hexagon Dawn
 
 hexagon Travels
 
-hexagon "First Challenge" as fight1
+hexagon "First Challenge" as fight1<<Hill of Gold>>
 
-hexagon "Second Challenge" as fight2
+hexagon "Second Challenge" as fight2<<Hill of Gold>>
 
-hexagon "Third Challenge" as fight3
+hexagon "Third Challenge" as fight3<<Hill of Gold>>
 
 
-Death --> Birth
+Death --> Yelmalio
 
-Birth --> Childhood
+Yelmalio --> Childhood
 
 Childhood --> Travels
 
@@ -105,14 +114,9 @@ Marriage -- Dawn
 
 Ernalda . Marriage
 
-rectangle "Imperial Palace" as palace
 
 Vrimak .le. Death
-rectangle "Hill of Gold" as hill
 
-palace - Childhood
-
-hill - fight1
 
 
 Dawn -- Monrogh
@@ -121,30 +125,27 @@ Dawn -- Kuschile
 }
 
 
+actor Elmal<<Dragon Pass>>
 
-actor Elmal
+actor Antirius<<Dara Happa>>
 
-actor Antirius
-
-actor Khelmal
+actor Khelmal<<Imther>>
 
 actor Orlanth #black
 
-actor Hippoi #black
+actor Redaylda <<Saird>>
 
-actor Kargzant
+actor Kargzant <<Pent>>
 
-actor Tharkantus
 
 actor Avivorus #black
 
-actor Gamara
+actor Gamara <<Pent>>
 
-actor "Balazar" as BelazarHero #darkgrey
+actor Balazar<<Balazar>> #darkgrey
 
-circle "Broken Ring" as ring
-
-actor Nolerianmar #darkgrey
+actor Hippoi #black
+actor Nolerianmar<<Esrolia>> #darkgrey
 
 Sun - Yelm
 
@@ -152,68 +153,47 @@ Lightfore - Yelmalio
 
 Yelm . Death
 
-Yelmalio - Birth
 
-Birth - Kargzant
 
 Childhood - Antirius
 
 Aldrya . Travels
 
-Travels - Tharkantus
+Travels - Kargzant
 
 fight1 - Elmal
 
 Elmal .. Orlanth
 
-Elmal .. Hippoi
+Elmal . Redaylda
 
-fight3 - Khelmal
-
-Orlanth .. Khelmal
-
-Orlanth - ring
-
-Avivorus .. Antirius
+fight3 -- Khelmal
 
 
-rectangle Pent #lightgrey
-Kargzant - Pent
-Gamara .. Kargzant
 
-rectangle "Dara Happa" as dara #lightgrey
-Antirius - dara
+Antirius . Avivorus 
 
 
-rectangle Balazar #lightgrey
-Tharkantus - Balazar
-Balazar - BelazarHero
 
-rectangle "Dragon Pass" as dp #lightgrey
-Elmal - dp
+Kargzant . Gamara
 
 
 
 
-rectangle Imther #lightgrey
-Khelmal - Imther
+
+Khelmal - Orlanth
 
 
+Dawn - Nolerianmar
+
+Nolerianmar . Hippoi 
 
 
-rectangle Esrolia #lightgrey
-Nolerianmar - Esrolia
+actor Heliacal<<Vanch>>
 
-Marriage - Nolerianmar
+fight2 - Heliacal
 
-Hippoi .. Nolerianmar
-
-
-rectangle Vanch #lightgrey
-actor Heliacal
-
-Heliacal -- fight2
-Vanch - Heliacal
+Dawn -- Balazar
 
 @enduml
 
@@ -259,7 +239,7 @@ Ehilm -- Ralios
 
 actor Hippoi #black
 
-actor Redaylda 
+actor Redaylda<<Saird>> 
 Saird -- Redaylda
 Redaylda -- Hippoi
 

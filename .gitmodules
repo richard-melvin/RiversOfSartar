@@ -1,0 +1,3 @@
+[submodule "fvtt"]
+	path = fvtt
+	url = git@github.com:sun-dragon-cult/fvtt-system-rqg.git
