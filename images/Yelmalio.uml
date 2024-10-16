@@ -167,7 +167,7 @@ Elmal .. Orlanth
 
 Elmal . Redaylda
 
-fight3 -- Khelmal
+fight3 - Khelmal
 
 
 
@@ -264,11 +264,6 @@ actor Galana
 Ralios -- Galana
 
 Galana -- Hippoi
-
-
-
-rectangle Vanch #lightgrey
-actor Helical #lightgrey
 
 @enduml
 

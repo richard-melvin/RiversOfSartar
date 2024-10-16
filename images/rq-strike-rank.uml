@@ -1,0 +1,265 @@
+
+@startuml
+
+
+
+actor "Broo #1" as npc1
+actor "Broo #2" as npc2
+actor "Broo #3" as npc3
+
+
+cloud combat
+
+npc1 <--> combat
+npc2 <--> combat
+npc3 <--> combat
+
+actor "PC #1" as pc1
+actor "PC #2" as pc2
+actor "NPC ally" as ally1
+
+
+combat <--> pc1
+combat <--> pc2
+combat <--> ally1
+
+@enduml
+
+@startuml
+mode compact
+
+
+concise "PC #1" as PC1
+concise "Broo #1" as B1
+concise "Broo #2" as B2
+concise "PC #2" as PC2
+concise "Broo #3" as B3
+
+@0
+
+PC1 is "SR 5"
+B1 is "SR 6"
+B2 is "SR 7"
+PC2 is "SR 4"
+B3 is "SR 7"
+
+
+@1
+
+@2
+
+@3
+
+@4
+PC2 -> B3 : 1
+
+PC2 is {hidden}
+
+@5
+PC1 -> B1 : 2
+
+PC1 is {hidden}
+
+@6
+
+B1 -> PC1 : 3
+B1 is {hidden}
+
+@7
+B2 -> PC1 : 4
+
+B2 is {hidden}
+
+
+B3 -> PC2 :  5
+
+B3 is {hidden}
+
+
+@12
+@enduml
+
+
+
+
+@startuml attack-and-parry.svg
+manual time-axis
+mode compact
+
+concise "Defend" as D
+concise "Melee Attack" as A
+
+
+@0
+D is Parry
+A is "DEX SR"
+
+@2
+A is "SIZ SR"
+
+
+@4
+A is "Weapon SR"
+
+
+
+@7
+A is {hidden}
+
+@8
+
+
+@12 
+
+D is {hidden}
+A is {hidden}
+
+@enduml
+
+
+
+
+@startuml surprise.svg
+manual time-axis
+mode compact
+
+concise "Defend" as D
+concise "Melee Attack" as A
+
+
+@0
+D is Surprise
+A is Surprise 
+
+@3 
+D is Dodge
+A is "Draw Weapon(s)"
+
+@8
+
+D is Parry
+A is {hidden}
+
+
+@12
+D is {hidden}
+
+
+
+
+
+@enduml
+
+
+
+@startuml movement.svg
+manual time-axis
+mode compact
+
+concise "Defend" as D
+concise "Melee Attack" as A
+concise "Move" as MV
+
+
+@0
+D is Parry
+A is "DEX SR"
+MV is "+3M"
+
+@1
+MV is {hidden}
+
+@2
+A is "SIZ SR"
+
+
+@4
+A is "Weapon SR"
+
+
+
+@7
+A is {hidden}
+
+@8
+
+
+@12 
+
+D is {hidden}
+A is {hidden}
+
+@enduml
+
+
+
+
+
+@startuml missile-attack.svg
+manual time-axis
+mode compact
+
+concise "Missile Attack" as A
+
+
+@0
+A is "DEX SR"
+
+@2
+A is "Reload"
+
+
+@7
+A is "DEX SR"
+
+
+@9
+A is {hidden}
+
+
+
+
+@12 
+
+
+@enduml
+
+
+
+@startuml spell-attack.svg
+manual time-axis
+mode compact
+
+concise "Spell Attack" as A
+concise "Defend" as D
+concise "Move" as MV
+
+
+@0
+A is "DEX SR"
+D is "Parry or Dodge"
+MV is "+3M"
+
+
+@1
+MV is {hidden}
+
+@2
+A is "MP SR"
+
+
+@3
+
+A is {hidden}
+
+
+
+
+@12 
+
+D is {hidden}
+
+
+@enduml
+
+
