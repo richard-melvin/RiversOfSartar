@@ -37,11 +37,11 @@ concise "Broo #3" as B3
 
 @0
 
-PC1 is "SR 5"
-B1 is "SR 6"
-B2 is "SR 7"
-PC2 is "SR 4"
-B3 is "SR 7"
+PC1 is "5 SR"
+B1 is "6 SR"
+B2 is "7 SR"
+PC2 is "4 SR"
+B3 is "8 SR"
 
 
 @1
@@ -52,8 +52,7 @@ B3 is "SR 7"
 
 @4
 PC2 -> B3 : 1
-
-PC2 is {hidden}
+PC2 is "5 SR"
 
 @5
 PC1 -> B1 : 2
@@ -70,10 +69,15 @@ B2 -> PC1 : 4
 
 B2 is {hidden}
 
-
+@8
 B3 -> PC2 :  5
 
 B3 is {hidden}
+@9
+PC2 -> B3 : 6
+
+PC2 is {hidden}
+
 
 
 @12
@@ -83,11 +87,10 @@ B3 is {hidden}
 
 
 @startuml attack-and-parry.svg
-manual time-axis
 mode compact
 
+concise "Attack" as A
 concise "Defend" as D
-concise "Melee Attack" as A
 
 
 @0
@@ -105,6 +108,7 @@ A is "Weapon SR"
 
 @7
 A is {hidden}
+A@0 <-> @7: Melee Attack
 
 @8
 
@@ -114,22 +118,22 @@ A is {hidden}
 D is {hidden}
 A is {hidden}
 
+highlight 12 to 14#lightgrey : round end
+
 @enduml
 
 
 
 
 @startuml surprise.svg
-manual time-axis
 mode compact
 
+concise "Attack" as A
 concise "Defend" as D
-concise "Melee Attack" as A
-
 
 @0
-D is Surprise
-A is Surprise 
+highlight 0 to 3#lightgrey : Surprise
+
 
 @3 
 D is Dodge
@@ -146,6 +150,7 @@ D is {hidden}
 
 
 
+highlight 12 to 14#lightgrey : round end
 
 
 @enduml
@@ -153,11 +158,10 @@ D is {hidden}
 
 
 @startuml movement.svg
-manual time-axis
 mode compact
 
+concise "Attack" as A
 concise "Defend" as D
-concise "Melee Attack" as A
 concise "Move" as MV
 
 
@@ -180,6 +184,7 @@ A is "Weapon SR"
 
 @7
 A is {hidden}
+A@0 <-> @7: Melee Attack
 
 @8
 
@@ -189,6 +194,8 @@ A is {hidden}
 D is {hidden}
 A is {hidden}
 
+highlight 12 to 14#lightgrey : round end
+
 @enduml
 
 
@@ -196,10 +203,9 @@ A is {hidden}
 
 
 @startuml missile-attack.svg
-manual time-axis
 mode compact
 
-concise "Missile Attack" as A
+concise "Attack" as A
 
 
 @0
@@ -207,6 +213,7 @@ A is "DEX SR"
 
 @2
 A is "Reload"
+A@0 <-> @2: First Shot
 
 
 @7
@@ -216,10 +223,13 @@ A is "DEX SR"
 @9
 A is {hidden}
 
+A@7 <-> @9: Second Shot
 
 
 
 @12 
+
+highlight 12 to 14#lightgrey : round end
 
 
 @enduml
@@ -230,13 +240,13 @@ A is {hidden}
 manual time-axis
 mode compact
 
-concise "Spell Attack" as A
+concise "Attack" as A
 concise "Defend" as D
 concise "Move" as MV
 
 
 @0
-A is "DEX SR"
+A is "Spell SR"
 D is "Parry or Dodge"
 MV is "+3M"
 
@@ -252,6 +262,7 @@ A is "MP SR"
 
 A is {hidden}
 
+A@0 <-> @3: Demoralise
 
 
 
@@ -259,6 +270,258 @@ A is {hidden}
 
 D is {hidden}
 
+highlight 12 to 14#lightgrey : round end
+
+@enduml
+
+
+@startuml rune-spell.svg
+mode compact
+
+concise "Attack" as A
+concise "Defend" as D
+concise "Move" as MV
+
+
+
+@0
+D is Parry
+A is "Spell SR"
+MV is "+3M"
+
+@1
+A is "DEX SR"
+A@0 <-> @1 : Shield 2
+
+@1
+MV is {hidden}
+
+@3
+A is "SIZ SR"
+
+
+@5
+A is "Weapon SR"
+
+
+
+@8
+A@1 <-> @8 : Melee Attack
+
+A is {hidden}
+
+
+@12
+
+
+
+D is {hidden}
+
+highlight 12 to 14#lightgrey : round end
+
+
+@enduml
+
+
+@startuml other-spell.svg
+mode compact
+
+concise "Attack" as A
+concise "Defend" as D
+concise "Move" as MV
+
+
+
+@0
+D is Parry
+A is "Spell SR"
+MV is "+3M"
+
+@1
+A is "DEX SR"
+A@0 <-> @1 : Shield 2
+
+@1
+MV is {hidden}
+
+@3
+A is "SIZ SR"
+
+
+@5
+A is "Weapon SR"
+
+
+
+@8
+A is "DEX SR"
+A@1 <-> @8 : Melee Attack
+
+
+@10
+A is "MP SR"
+
+@12
+A is {hidden}
+
+A@8 <-> @12 : Protection 3
+
+@12 
+
+D is {hidden}
+
+highlight 12 to 14#lightgrey : round end
+
+
+@enduml
+
+
+@startuml coordination.svg
+mode compact
+
+concise "Attack" as A
+concise "Defend" as D
+concise "Move" as MV
+
+
+
+@0
+D is Parry
+A is "DEX SR"
+MV is "+3M"
+
+@1
+MV is {hidden}
+
+@2
+A is "MP SR"
+
+@3
+A is "DEX SR"
+A@0 <-> @3 : Coordination
+
+
+@4
+A is "SIZ SR"
+
+@6
+A is "Weapon SR"
+
+@9
+A@3 <-> @9 : Melee Attack
+
+A is "DEX SR"
+
+@10
+A is "MP SR"
+
+@11
+
+A@9 <-> @12 : Protection 3
+
+@12 
+A is {hidden}
+
+D is {hidden}
+
+highlight 12 to 14#lightgrey : round end
+
+
+@enduml
+
+
+
+@startuml double-attack.svg
+mode compact
+
+concise "Attack" as A
+concise "Move" as MV
+
+
+@0
+A is "DEX SR"
+MV is "+3M"
+
+@1
+MV is {hidden}
+
+@2
+A is "SIZ SR"
+
+
+@4
+A is "Mainhand SR"
+
+
+
+@6
+A@0 <-> @6 : Main Hand Attack
+
+A is "DEX SR"
+
+@8
+A is "SIZ SR"
+
+@10
+A is "Offhand SR"
+@12 
+
+A@6 <-> @12 : Off Hand Attack
+
+A is {hidden}
+
+highlight 12 to 14#lightgrey : round end
+
+@enduml
+
+
+
+
+@startuml split-attack.svg
+mode compact
+
+
+concise "Attack" as A
+concise "Defend" as D
+concise "Move" as MV
+
+
+@0
+A is "DEX SR"
+D is Parry
+
+MV is "+3M"
+
+@1
+MV is {hidden}
+
+@2
+A is "SIZ SR"
+
+
+@4
+A is "Weapon SR"
+
+
+
+@6
+A@0 <-> @6 : First Attack
+
+A is "DEX SR"
+
+@8
+A is "SIZ SR"
+
+@10
+A is "Weapon SR"
+@12 
+
+A@6 <-> @12 : Second Attack
+
+A is {hidden}
+D is {hidden}
+
+highlight 12 to 14#lightgrey : round end
 
 @enduml
 
