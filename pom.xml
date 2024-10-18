@@ -1,0 +1,94 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.radm</groupId>
+	<artifactId>ros</artifactId>
+	<version>${revision}</version>
+    <packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<revision>0.0.1-SNAPSHOT</revision>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>net.sourceforge.plantuml</groupId>
+			<artifactId>plantuml</artifactId>
+			<version>1.2024.7</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.jeluard</groupId>
+				<artifactId>plantuml-maven-plugin</artifactId>
+				<version>1.2</version>
+				<configuration>
+					<sourceFiles>
+						<directory>${project.basedir}/images</directory>
+						<includes>
+							<include>**.uml</include>> 
+						</includes>
+					</sourceFiles>
+					<outputDirectory>${project.build.outputDirectory}</outputDirectory>
+					<format>svg</format>
+				</configuration>
+				<executions>
+					<execution>
+						<?m2e execute onIncremental?>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<phase>generate-resources</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<mainClass>net.sourceforge.plantuml.Run</mainClass>
+					<commandlineArgs>-encodesprite 16z fvtt/src/assets/images/runes/air.svg</commandlineArgs>
+				
+				</configuration>
+				<executions>
+					<execution>
+						<?m2e execute onIncremental?>
+						<id>sprites</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+    
+	<profiles>
+		<profile>
+			<id>Windows</id>
+			<activation>
+				<os>
+					<family>Windows</family>
+				</os>
+			</activation>
+			<properties>
+				<pandoc.bin>pandoc.exe</pandoc.bin>
+			</properties>
+		</profile>
+		<profile>
+			<id>unix</id>
+			<activation>
+				<os>
+					<family>unix</family>
+				</os>
+			</activation>
+			<properties>
+				<pandoc.bin>pandoc</pandoc.bin>
+			</properties>
+		</profile>
+	</profiles>
+</project>

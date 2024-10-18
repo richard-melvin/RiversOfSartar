@@ -137,6 +137,7 @@ actor Redaylda <<Saird>>
 
 actor Kargzant <<Pent>>
 
+actor Halamalao <<Elves>>
 
 actor Avivorus #black
 
@@ -149,17 +150,18 @@ actor Nolerianmar<<Esrolia>> #darkgrey
 
 Sun - Yelm
 
-Lightfore - Yelmalio
+Yelmalio - Lightfore
 
 Yelm . Death
 
 
+Kargzant - Lightfore
 
 Childhood - Antirius
 
 Aldrya . Travels
 
-Travels - Kargzant
+Travels - Halamalao
 
 fight1 - Elmal
 
@@ -194,6 +196,7 @@ actor Heliacal<<Vanch>>
 fight2 - Heliacal
 
 Dawn -- Balazar
+
 
 @enduml
 

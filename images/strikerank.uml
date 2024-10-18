@@ -65,66 +65,36 @@ B2 is {hidden}
 
 
 @startuml
-manual time-axis
 mode compact
 
-concise "Defend" as D
 concise "Melee Attack" as A
 
 concise "Missile Attack" as MA
 
-concise "Move" as MV
+concise "Fast Magic Attack" as FSMA
 
-concise "Spirit Magic Attack" as SMA
-
-concise "Other Magic" as MG
-
-concise "Prepare" as PR
-
-@0
-D is Parry
-A is "DEX SR"
-MA is "DEX SR"
-
-MV is "+3M"
-MG is "<=2 MP"
-SMA is "DEX SR"
-
-PR is "5 SR"
-
-@1
-MV is {hidden}
-MG is "+1 MP"
+concise "Focused Magic Attack" as FOMA
 
 
-@2
-A is "SIZ SR"
-MA is "Weapon SR"
+@A
+0 is "DEX SR"
+2 is "SIZ SR"
+4 is "Weapon SR"
+7 is {hidden}
 
-MG is {hidden}
-SMA is "<=2 MP "
+@MA 
+0 is "DEX SR"
+2 is "Weapon SR"
+5 is {hidden}
 
-@3
-SMA is "+1 MP"
+@FSMA
+0 is "SPELL"
+1 is {hidden}
 
-@4
-A is "Weapon SR"
-SMA is {hidden}
+@FOMA 
+0 is "DEX SR"
+2 is "MP SR"
+5 is {hidden}
 
-
-@5
-MA is {hidden}
-PR is {hidden}
-
-@7
-A is {hidden}
-
-@8
-
-
-@12 
-
-D is {hidden}
-A is {hidden}
 
 @enduml
