@@ -56,8 +56,7 @@
 							<goal>execute</goal>
 						</goals>
 						<configuration>
-							<source>
-								${project.basedir}/scripts/plantUmlSprites.groovy</source>
+							<source>${project.basedir}/scripts/plantUmlSprites.groovy</source>
 						</configuration>
 					</execution>
 				</executions>
