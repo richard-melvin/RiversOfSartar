@@ -19,7 +19,7 @@ import java.awt.*
 import java.awt.image.BufferedImage
 import java.nio.file.Paths
 
-final DEFAULT_SCALE = 2.0
+final DEFAULT_SCALE = 0.5
 final TMP_DIR = new File('/tmp/svgsFolderUrl2plantUmlSprites')
 TMP_DIR.mkdirs()
 final SPRITES_DIR = new File('sprites')

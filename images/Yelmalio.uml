@@ -5,39 +5,29 @@ listfonts
 
 @startuml
 
-skinparam defaultFontName Glorantha Core Runes
-
-skinparam componentstyle rectangle
 
 
-skinparam actorStyle Hollow 
-
-
+!includeurl icons.puml
 
 frame Legend {
 
 
+together {
 actor Cult #black
 
 actor Subcult<<Location>>
 
 actor Hero<<Location>> #darkgrey
 
+}
+
+together {
+
 circle "Celestial Body" as body
 
 hexagon Event<<Location>>
 
-
-
-
-Cult -[hidden] Subcult
-
-Subcult -[hidden] Hero
-
-
-Cult -[hidden]- body
-
-Cult -[hidden]- Event
+}
 
 
 }
@@ -49,6 +39,7 @@ skinparam componentstyle rectangle
 
 
 skinparam actorStyle Hollow 
+skinparam handwritten true
 
 
 
@@ -61,15 +52,15 @@ circle Sun
 circle Lightfore
 
 
-actor Yelm #black
+actor "Yelm\n<font:Glorantha Core Runes>x..t</font>" as Yelm #black
 
-actor Yelmalio #black
+actor "Yelmalio\n<font:Glorantha Core Runes>  Oy</font>" as Yelmalio #black
 
-actor Ernalda #black
+actor "Ernalda\n<font:Glorantha Core Runes>xeel</font>" as Ernalda #black
 
-actor Aldrya #black
+actor "Aldrya\n<font:Glorantha Core Runes> pex</font>" as Aldrya #black
 
-actor Vrimak #black
+actor "Vrimak\n<font:Glorantha Core Runes> ,B </font>" as Vrimak #black
 
 
 actor Monrogh #darkgrey
@@ -125,13 +116,13 @@ Dawn -- Kuschile
 }
 
 
-actor Elmal<<Dragon Pass>>
+actor Elmal <<Dragon Pass>>
 
 actor Antirius<<Dara Happa>>
 
 actor Khelmal<<Imther>>
 
-actor Orlanth #black
+actor "Orlanth\n<font:Glorantha Core Runes>sggW</font>" as Orlanth #black
 
 actor Redaylda <<Saird>>
 
@@ -139,13 +130,13 @@ actor Kargzant <<Pent>>
 
 actor Halamalao <<Elves>>
 
-actor Avivorus #black
+actor "Avivorus\n<font:Glorantha Core Runes>   t</font>" as Avivorus #black
 
 actor Gamara <<Pent>>
 
 actor Balazar<<Balazar>> #darkgrey
 
-actor Hippoi #black
+actor "Hippoi \n<font:Glorantha Core Runes> ,B </font>" as Hippoi #black
 actor Nolerianmar<<Esrolia>> #darkgrey
 
 Sun - Yelm

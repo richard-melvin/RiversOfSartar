@@ -1,0 +1,20 @@
+@startuml
+
+skinparam handwritten true
+skinparam componentstyle rectangle
+allowmixing
+
+skinparam actorStyle Hollow 
+
+!includeurl ../sprites/fire_sky.puml
+
+!includeurl ../sprites/god.puml
+
+
+skinparam RectangleBorderColor  White
+skinparam RectangleBackgroundColor  White
+
+!$runefont = 'Glorantha Core Runes'
+
+
+@enduml
