@@ -1,55 +1,106 @@
 @startuml
-skinparam componentstyle rectangle
+!includeurl icons.puml
 
-component "PC" as character #lightblue
+skinparam rectangleFontSize 24
 
-component "Tribe" as tribe {
+rectangle "<$air>" as air
 
-component "Clan" as clan
-}  
-
-component "Homeland" as homeland
-
-component "Rune Cult" as cult 
-
-component spell [
-Rune Spell
----
-resuable?]
-
-component pool [
-Rune Pool
----
-size]
-
-component "Subcult" as subcult
-
-cloud "Subordinate Cult" as subord
-
-pool <-- spell : cast from
+rectangle "<$fire_sky>" as fire_sky
+rectangle "<$water>" as water
+rectangle "<$earth>" as earth
+rectangle "<$darkness>" as darkness
 
 
-character -> cult: worships
+darkness .. earth
+darkness .. fire_sky
+earth .. air
+fire_sky .. water
+air . water
 
-character --> subcult: taught by
 
-
-cult <-- subcult : aspect of
-
-cult <-- subord: aspect of
-
-cult <-> cult: cult\nassociation
+rectangle "Swords,\nDaggers" as sword
+rectangle "Hammers,\nMaces and Clubs" as club
+rectangle "Flexible Weapons" as net
+rectangle "Axes" as axe
+rectangle "Bows,\nCrossbows" as bow
+rectangle "Spear" as spear
 
 
 
+air .. sword
+darkness .up. club
+water .. net
+earth .le. axe
+
+fire_sky . bow
+
+darkness .. spear
+earth . spear 
+spear . fire_sky
+spear .. air
+spear .. water
 
 
-cult --> spell : supplies
+rectangle "Pole Weapons" as pole
+rectangle Shields
+rectangle "Javelins,\nDarts" as javelin
+rectangle Unarmed
+rectangle Slings
 
-character --> pool: has
+pole . darkness
+pole .. earth
 
-clan <-- character : born into
+darkness . Slings 
+Slings .. fire_sky
 
-clan -> homeland : located in
+air .. javelin
+water .. javelin
+
+
+earth .. Shields
+Shields . air
+
+fire_sky .. Unarmed
+Unarmed .le. water
+
 
 @enduml
+
+
+@startmindmap
+
+* Melee
+** Weapons
+***_ Axes
+***_ Hammers, Maces and Clubs
+***_ Flexible Weapons
+***_ Pole Weapons
+***_ Spears
+***_ Swords and Daggers
+***_ Unarmed
+**_ Shields
+
+
+left side
+
+**_ 1H
+**_ 2H
+**_ Offhand
+
+right side
+ 
+* Missile
+** Projectile
+***_ Slings
+***_ Bows and Crossbows
+** Thrown Weapons
+***_ Javelins, Spears and Darts
+***_ (Small) Thrown Weapons
+***_ Flexible thrown Weapons
+
+
+
+
+
+@endmindmap
+

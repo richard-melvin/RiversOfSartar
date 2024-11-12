@@ -7,8 +7,11 @@ allowmixing
 skinparam actorStyle Hollow 
 
 !includeurl ../sprites/fire_sky.puml
+!includeurl ../sprites/air.puml
+!includeurl ../sprites/water.puml
+!includeurl ../sprites/earth.puml
+!includeurl ../sprites/darkness.puml
 
-!includeurl ../sprites/god.puml
 
 
 skinparam RectangleBorderColor  White
