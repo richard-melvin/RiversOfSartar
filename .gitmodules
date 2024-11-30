@@ -1,3 +1,6 @@
 [submodule "fvtt"]
 	path = fvtt
 	url = git@github.com:sun-dragon-cult/fvtt-system-rqg.git
+[submodule "icons"]
+	path = icons
+	url = git@github.com:tupadr3/plantuml-icon-font-sprites.git

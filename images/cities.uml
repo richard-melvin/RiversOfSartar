@@ -1,0 +1,84 @@
+@startuml legend-city.svg
+
+!includeurl icons.puml
+
+legend top right
+
+<$monument>  Shrine
+<$landmark>  Minor Temple
+<$landmark_dome>  Major Temple
+<$place_of_worship>  Great Temple
+
+end legend
+
+@enduml
+
+@startuml dolsonin-city.svg
+
+!includeurl icons.puml
+
+
+title Dolsonin
+
+MAJOR(Ernalda, "<b>Ernalda</b>\n Barntar\n Eiritha") 
+
+
+
+MINOR(Oslira, "Oslira")
+MINOR(SevenM, "Seven\n Mothers")
+MINOR(Orlanth, "Orlanth\nThunderous")
+
+
+
+SHRINE(Chalana,  "Chalana\n Arroy") 
+SHRINE(LM, "Lhankhor\n Mhy")
+SHRINE(Yelmalio, "Yelmalio")
+SHRINE(Issaries, "Issaries")
+ 
+
+
+Ernalda .. Orlanth
+Ernalda .up. Yelmalio
+
+Ernalda .. Chalana
+Orlanth .. Chalana
+
+Orlanth .. Issaries
+Orlanth .. LM
+
+Orlanth . Oslira
+
+
+
+@enduml
+
+
+@startuml wilmskirk-city.svg
+
+!includeurl icons.puml
+
+title Wilmskirk
+
+MAJOR(OrlanthRex, "<b>Orlanth Rex</b>\nOrlanth Adventerous\nChalana Arroy\nIssaries\nLhankhor Mhy")
+
+MINOR(Ernalda, "Ernalda")
+
+MINOR(Gustbran, "Gustbran")
+MINOR(SevenM, "<i>Seven Mothers\</i>")
+
+SHRINE(Humakt, "Humakt")
+SHRINE(Eurmal, "Eurmal\nShapechanger")
+SHRINE(Uleria, "Uleria")
+
+
+OrlanthRex . Ernalda
+OrlanthRex .. Eurmal
+
+Gustbran . OrlanthRex
+
+
+Eurmal .[hidden] Humakt
+Humakt .[hidden] Uleria
+
+@enduml
+

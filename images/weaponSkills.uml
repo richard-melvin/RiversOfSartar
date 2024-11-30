@@ -1,5 +1,5 @@
-@startuml
-!includeurl icons.puml
+@startuml weaponsAndRunes.svg
+!includeurl ../images/icons.puml
 
 skinparam rectangleFontSize 24
 
@@ -66,41 +66,4 @@ Unarmed .le. water
 
 @enduml
 
-
-@startmindmap
-
-* Melee
-** Weapons
-***_ Axes
-***_ Hammers, Maces and Clubs
-***_ Flexible Weapons
-***_ Pole Weapons
-***_ Spears
-***_ Swords and Daggers
-***_ Unarmed
-**_ Shields
-
-
-left side
-
-**_ 1H
-**_ 2H
-**_ Offhand
-
-right side
- 
-* Missile
-** Projectile
-***_ Slings
-***_ Bows and Crossbows
-** Thrown Weapons
-***_ Javelins, Spears and Darts
-***_ (Small) Thrown Weapons
-***_ Flexible thrown Weapons
-
-
-
-
-
-@endmindmap
 

@@ -4,6 +4,7 @@
 
 | Sprite | Icon |
 |--------|------|
+|🧟 .gitignore|![.gitignore](pngs/.gitignore.png)|
 |air|![air](pngs/air.png)|
 |barntar|![barntar](pngs/barntar.png)|
 |beast|![beast](pngs/beast.png)|

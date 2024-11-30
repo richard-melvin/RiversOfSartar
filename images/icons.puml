@@ -3,6 +3,7 @@
 skinparam handwritten true
 skinparam componentstyle rectangle
 allowmixing
+skinparam titleFontSize 18
 
 skinparam actorStyle Hollow 
 
@@ -12,12 +13,30 @@ skinparam actorStyle Hollow
 !includeurl ../sprites/earth.puml
 !includeurl ../sprites/darkness.puml
 
+!$ICONURL = "../icons/icons"
+
+!include $ICONURL/common.puml
+!includeurl $ICONURL/govicons/washington_monument.puml
+!includeurl $ICONURL/font-awesome-6/crown.puml
+!includeurl $ICONURL/font-awesome-6/landmark.puml
+!includeurl $ICONURL/font-awesome-6/landmark_dome.puml
+!includeurl $ICONURL/font-awesome-6/monument.puml
+!includeurl $ICONURL/font-awesome-6/mosque.puml
+!includeurl $ICONURL/font-awesome-6/place_of_worship.puml
+!includeurl $ICONURL/font-awesome-6/tent.puml
+
+
+!define SHRINE(_alias, _label) rectangle "<$monument*.7>\n_label" as _alias
+!define MINOR(_alias, _label) rectangle "<$landmark>\n_label" as _alias
+!define MAJOR(_alias, _label) rectangle "<$landmark_dome*1.4>\n_label" as _alias
+!define GREAT(_alias, _label) rectangle "<$place_of_worship*2>\n_label" as _alias
 
 
 skinparam RectangleBorderColor  White
 skinparam RectangleBackgroundColor  White
 
 !$runefont = 'Glorantha Core Runes'
+
 
 
 @enduml
