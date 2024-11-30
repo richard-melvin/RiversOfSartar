@@ -1,16 +1,16 @@
-@startuml
+@startuml cults-tribes.svg
 skinparam componentstyle rectangle
 skinparam actorStyle Hollow 
+!includeurl icons.puml
 
 
 title Orlanth Rex Tribe 
 
 frame Rules {
 
-storage "Orlanth" as cult
+RULES(cult, "Orlanth")
 
-
-storage "Orlanth Rex" as subcult 
+SUBRULES(subcult, "Orlanth Rex")
 
 
 cult <-- subcult : variant of
@@ -20,17 +20,17 @@ cult <-- subcult : variant of
 }
 
 frame "Mundane World" {
-actor "Tribal King" as chief
+actor "Tribal King" as chief 
 
-component tribe #lightblue
-
-collections clans
-
-component "Orlanth Rex\nTemple" as temple
+TRIBE(tribe, "Tribe")
 
 collections clans
 
-collections "Tribal Temples" as temples
+MAJOR(temple, "Orlanth Rex\nTemple" )
+
+CLAN(clans, "Clans")
+
+MINOR(temples, "Tribal Temples")
 
 tribe <-- clans : supports
 

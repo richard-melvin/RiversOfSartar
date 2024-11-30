@@ -1,5 +1,5 @@
 @startuml
-skinparam componentstyle rectangle
+!includeurl icons.puml
 
 
 
@@ -19,9 +19,9 @@ storage "Rune Priest" as rank
 }
 
 frame "Mundane World" {
-actor "Chieftan" as chief
+actor "Chieftan" as chief #black
 
-component clan  #lightblue
+CLAN(clan, "Clan")  
 }
 
 frame Otherworld {

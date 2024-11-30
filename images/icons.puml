@@ -6,6 +6,7 @@ allowmixing
 skinparam titleFontSize 18
 
 skinparam actorStyle Hollow 
+skinparam actorBackgroundColor black
 
 !includeurl ../sprites/fire_sky.puml
 !includeurl ../sprites/air.puml
@@ -24,6 +25,10 @@ skinparam actorStyle Hollow
 !includeurl $ICONURL/font-awesome-6/mosque.puml
 !includeurl $ICONURL/font-awesome-6/place_of_worship.puml
 !includeurl $ICONURL/font-awesome-6/tent.puml
+!includeurl $ICONURL/font-awesome-6/people_group.puml
+!includeurl $ICONURL/font-awesome-6/people_line.puml
+!includeurl $ICONURL/font-awesome-6/book.puml
+!includeurl $ICONURL/font-awesome-6/book_open.puml
 
 
 !define SHRINE(_alias, _label) rectangle "<$monument*.7>\n_label" as _alias
@@ -31,6 +36,11 @@ skinparam actorStyle Hollow
 !define MAJOR(_alias, _label) rectangle "<$landmark_dome*1.4>\n_label" as _alias
 !define GREAT(_alias, _label) rectangle "<$place_of_worship*2>\n_label" as _alias
 
+!define CLAN(_alias, _label) rectangle "<$people_group>\n_label" as _alias
+!define TRIBE(_alias, _label) rectangle "<$people_line>\n_label" as _alias
+
+!define RULES(_alias, _label) rectangle "<$book>\n_label" as _alias
+!define SUBRULES(_alias, _label) rectangle "<$book_open>\n_label" as _alias
 
 skinparam RectangleBorderColor  White
 skinparam RectangleBackgroundColor  White

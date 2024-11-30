@@ -1,16 +1,16 @@
 @startuml
-skinparam componentstyle rectangle
-skinparam actorStyle Hollow 
+!includeurl icons.puml
 
 
 title Waha Tribe 
 
 frame Rules {
 
-storage "Waha" as cult
 
+RULES(cult, "Waha")
 
-storage "Khan" as rank
+SUBRULES(rank, "Khan")
+
 
 rank --> cult: rank of
 
@@ -20,12 +20,9 @@ rank --> cult: rank of
 frame "Mundane World" {
 actor "Tribal Khan" as chief
 
-component tribe #lightblue
+TRIBE(tribe, "Tribe")
 
-collections clans
-
-
-collections clans
+CLAN(clans, "Clans")
 
 
 tribe --> clans : split into

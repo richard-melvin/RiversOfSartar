@@ -4,6 +4,7 @@
 @startuml
 skinparam componentstyle rectangle
 
+!includeurl icons.puml
 
 
 title Heler Rain Sword Warband
@@ -11,16 +12,16 @@ title Heler Rain Sword Warband
 
 frame "Mundane World" {
 
-component "warband" as clan #lightblue
+CLAN(clan, "warband")
 
-component "Heler\nTemple" as cult
 
+MINOR(cult, "Heler\nTemple")
 
 
 clan --> cult : has
 
 
-actor "Rune Lord" as chief
+actor "Rune Lord" as chief #black
 
 
 
