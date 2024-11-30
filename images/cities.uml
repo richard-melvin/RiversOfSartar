@@ -64,7 +64,7 @@ MAJOR(OrlanthRex, "<b>Orlanth Rex</b>\nOrlanth Adventerous\nChalana Arroy\nIssar
 MINOR(Ernalda, "Ernalda")
 
 MINOR(Gustbran, "Gustbran")
-MINOR(SevenM, "<i>Seven Mothers\</i>")
+MINOR(SevenM, "<i>Seven Mothers</i>")
 
 SHRINE(Humakt, "Humakt")
 SHRINE(Eurmal, "Eurmal\nShapechanger")
@@ -82,3 +82,71 @@ Humakt .[hidden] Uleria
 
 @enduml
 
+@startuml furthest-city.svg
+
+!includeurl icons.puml
+
+title Furthest
+
+GREAT(SevenM, "Seven Mothers")
+GREAT(HonEel, "Hon-Eel")
+GREAT(market, "Etyries\nIssaries")
+
+MAJOR(university, "Irripi Ontor\nLhankhor Mhy")
+MAJOR(yt, "Yanafal Tarnils")
+MAJOR(Ernalda, "Ernalda")
+MAJOR(Chalana,  "Chalana\n Arroy") 
+MAJOR(Oslira, "Oslira")
+
+MINOR(Yelm, "Yelm\nImperator")
+MINOR(Yelmalio, "Yelmalio")
+MINOR(Lodril, "Lodril")
+MINOR(Gustbran, "Gustbran")
+MINOR(Uleria, "Uleria")
+
+SHRINE(Red, " Red\nGodess")
+SHRINE(Donandar, "Donandar")
+
+SHRINE(Asrelia, "Asrelia")
+SHRINE(BabGor, "Babeester Gor")
+SHRINE(MaranGor, "Maran Gor")
+SHRINE(TKT, "Ty Kora Tek")
+SHRINE(Voria, "Voria")
+
+
+
+Ernalda .. Asrelia
+Ernalda .. BabGor
+Ernalda .. MaranGor
+Ernalda .. TKT
+Ernalda .. Voria
+
+
+Red .. SevenM
+Red .. HonEel
+Red .. market
+
+SevenM . HonEel
+market . SevenM
+HonEel .. Yelm
+
+Yelm .. Ernalda
+Yelm .. Lodril
+Yelm . Oslira
+Yelmalio . Yelm
+
+Lodril .le Gustbran
+
+SevenM .. university
+SevenM .. yt
+
+Ernalda ... Chalana
+Yelm . Chalana
+
+
+Donandar . Ernalda
+Yelm . Donandar
+
+Gustbran .[hidden]. Uleria 
+
+@enduml
