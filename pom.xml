@@ -22,31 +22,9 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>com.github.jeluard</groupId>
-				<artifactId>plantuml-maven-plugin</artifactId>
-				<version>1.2</version>
-				<configuration>
-					<sourceFiles>
-						<directory>${project.basedir}/images</directory>
-						<includes>
-							<include>**.uml</include>> </includes>
-					</sourceFiles>
-					<outputDirectory>${project.build.outputDirectory}</outputDirectory>
-					<format>svg</format>
-				</configuration>
-				<executions>
-					<execution>
-						<?m2e execute onIncremental?>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<phase>generate-resources</phase>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.codehaus.gmaven</groupId>
 				<artifactId>groovy-maven-plugin</artifactId>
+				<version>2.1.1</version>
 				<executions>
 					<execution>
 						<?m2e execute onIncremental?>
@@ -56,7 +34,8 @@
 							<goal>execute</goal>
 						</goals>
 						<configuration>
-							<source>${project.basedir}/scripts/plantUmlSprites.groovy</source>
+							<source>
+								${project.basedir}/scripts/plantUmlSprites.groovy</source>
 						</configuration>
 					</execution>
 				</executions>
@@ -68,6 +47,94 @@
 						<type>pom</type>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>com.github.davidmoten</groupId>
+				<artifactId>plantuml-maven-plugin</artifactId>
+				<version>0.2.12</version>
+				<executions>
+					<execution>
+						<id>generate-diagrams</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<directory>${project.basedir}/images/</directory>
+								<includes>
+									<include>**/*.uml</include>
+								</includes>
+							</sources>
+							<outputDirectory>
+								${project.build.directory}</outputDirectory>
+							<formats>
+								<format>png</format>
+								<format>svg</format>
+							</formats>
+							<preserveDirectoryStructure>false</preserveDirectoryStructure>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>concat</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<!--Provide the destination file-->
+								<concat
+									destfile="${project.build.outputDirectory}/cults.md"
+									force="yes">
+									<!-- Provide directory containing txt files
+									that you need to concat-->
+									<fileset
+										dir="${project.basedir}/markdown/cults">
+										<include name="*.md"></include>
+									</fileset>
+								</concat>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<?m2e execute onIncremental?>
+						<id>pandoc</id>
+						<phase>process-resources</phase>
+						<configuration>
+							<executable>cmd</executable>
+
+							<workingDirectory>${project.build.directory}</workingDirectory>
+							<arguments>
+								<argument>/C</argument>
+								<argument>pandoc</argument>
+								<argument>
+									${project.build.outputDirectory}/cults.md</argument>
+<!--								<argument>-_-reference-doc</argument>
+								<argument>
+									${project.basedir}/docs/Jonstown_Compendium_Template.docx</argument>-->
+								<argument>-o</argument>
+								<argument>cults.docx</argument>
+							</arguments>
+						</configuration>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

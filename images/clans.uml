@@ -1,4 +1,4 @@
-@startuml
+@startuml valind-clan.png
 !includeurl icons.puml
 
 
@@ -65,8 +65,8 @@ cult <-- rank: rank of
 
 
 
-@startuml
-skinparam componentstyle rectangle
+@startuml asrelian-clan.png
+!includeurl icons.puml
 
 
 
@@ -168,8 +168,8 @@ shrine <. subcult : described by
 
 
 
-@startuml
-skinparam componentstyle rectangle
+@startuml orlanth-clan.png
+!includeurl icons.puml
 
 
 

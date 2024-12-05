@@ -1,9 +1,6 @@
 
-@startuml
-listfonts
-@enduml
 
-@startuml
+@startuml doctrines-legend.png
 
 
 
@@ -34,7 +31,7 @@ hexagon Event<<Location>>
 
 @enduml
 
-@startuml
+@startuml doctrines-yelmalio.png
 skinparam componentstyle rectangle
 
 
@@ -192,7 +189,7 @@ Dawn -- Balazar
 @enduml
 
 
-@startuml
+@startuml doctrines-other-sun.png
 skinparam componentstyle rectangle
 
 title Sun and Horse Gids
