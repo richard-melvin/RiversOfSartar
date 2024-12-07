@@ -7,6 +7,7 @@ Hopefully this will also prove useful to those who want to stick with the Rules 
 
 ## RQ:G Rules as Written
 
+![](cults-intro.png)
 
 A PC is born into a clan, which is normally part of a tribe, and located in a homeland. Default PCs are all initiates, so worship a god via a Rune Cult. This means they have a Rune Pool (RP), which initially has a size of 3. This can be used to cast any of the three Rune Spells they initially know.
 
@@ -44,9 +45,9 @@ This means that, unlike in most previous  Gloranthan rulesets, in RQ:G the quest
 
 More common than multiple cult membership is transferring between cults, often in a way corresponding to different stages of life. For example, the CoR writes up of Asrelia states that priestesses of Ernalda past childbearing age may retire from that role and automatically become a Priestess of Asrelia.
 
-Rivers of Sartar House Rules
+## House Rules
 
-A few minor  changes to the RAW are recommended, whether or not you are using the rest of these rules.
+A few minor changes to the RAW are recommended, whether or not you are using the rest of these rules.
 
 In the case of split Rune Pools, the CHA cap on the size of a Rune Pool applies to the sum of such split Rune Pools. This avoids multiple cult initiation being not just more flexible, but a stronger route to raw power than focusing on a single cult.
 When transferring between friendly or associated cults in a way approved by the new cults, access to spells available to both cults is retained. The new Rune Pool has a size based on the number of such spells known.

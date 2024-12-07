@@ -1,0 +1,44 @@
+@startuml cults-intro.svg
+
+!includeurl icons.puml
+
+
+actor PC
+
+CLAN(clan, "Clan")
+TRIBE(tribe, "Tribe")
+HOMELAND(homeland, "Homeland")
+
+RULES(cult, "Rune Cult")
+
+SUBORD(subord, "Subordinate\nCult")
+SUBRULES(subcult, "Subcult")
+
+
+SPELL(spell, "Rune Spell")
+
+POOL(pool, "Rune Pool")
+
+tribe <- clan : part of
+
+PC -up-> clan : born into
+
+clan -> homeland : located in
+
+PC -> cult : worships
+
+cult <-> cult : association
+
+PC --> pool
+
+pool <-- spell : cast from
+
+PC --> subcult : taught by
+
+cult <-- subcult : aspect of
+
+cult <-- subord : run by
+
+cult ..> spell : available to?
+
+@enduml

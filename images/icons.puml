@@ -29,6 +29,11 @@ skinparam actorBackgroundColor black
 !includeurl $ICONURL/font-awesome-6/people_line.puml
 !includeurl $ICONURL/font-awesome-6/book.puml
 !includeurl $ICONURL/font-awesome-6/book_open.puml
+!includeurl $ICONURL/font-awesome-6/book_bookmark.puml
+
+!includeurl $ICONURL/font-awesome-6/map.puml
+!includeurl $ICONURL/font-awesome-5/magic.puml
+!includeurl $ICONURL/font-awesome/thermometer.puml
 
 
 !define SHRINE(_alias, _label) rectangle "<$monument*.7>\n_label" as _alias
@@ -38,9 +43,15 @@ skinparam actorBackgroundColor black
 
 !define CLAN(_alias, _label) rectangle "<$people_group>\n_label" as _alias
 !define TRIBE(_alias, _label) rectangle "<$people_line>\n_label" as _alias
+!define HOMELAND(_alias, _label) rectangle "<$map>\n_label" as _alias
 
 !define RULES(_alias, _label) rectangle "<$book>\n_label" as _alias
 !define SUBRULES(_alias, _label) rectangle "<$book_open>\n_label" as _alias
+!define SUBORD(_alias, _label) rectangle "<$book_bookmark>\n_label" as _alias
+
+!define SPELL(_alias, _label) rectangle "<$magic>\n_label" as _alias
+!define POOL(_alias, _label) rectangle "<$thermometer>\n_label" as _alias
+
 
 skinparam RectangleBorderColor  White
 skinparam RectangleBackgroundColor  White

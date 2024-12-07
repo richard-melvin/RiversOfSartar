@@ -7,13 +7,9 @@ title Valind Clan
 
 frame Rules {
 
-storage cult [
-Rune Cult
----
-Valind
-]
+RULES(cult, "Valind")
 
-storage "Rune Priest" as rank
+SUBRULES(rank, "Rune Priest")
 
 
 }
@@ -75,17 +71,10 @@ title Asrelian Great Temple
 
 frame Rules {
 
-storage cult [
-Rune Cult
----
-Asrelia
-]
+RULES(cult, "Asrelia")
 
-storage subcult [
-Subordinate Cult
----
-Aleshmara
-]
+SUBRULES(subcult, "Aleshmara")
+
 
 cult <-- subcult: part of
 
@@ -93,11 +82,8 @@ cult <-- subcult: part of
 
 frame "Mundane World" {
 
-component clan #lightblue [
-Great Temple
----
-Asrelia
-]
+GREAT(clan, "Great Temple")
+
 
 
 
@@ -105,7 +91,7 @@ actor "High\nPriestess" as chief
 
 actor "Specialist\nPriestess" as godtalker
 
-component "Shrine" as shrine
+SHRINE(shrine, "Shrine")
 }
 
 frame Otherworld {
@@ -178,11 +164,11 @@ title Orlanth Thunderous Clan
 
 frame "Mundane World" {
 
-component "Clan" as clan #lightblue
+CLAN(clan, "   Clan")  
 
-component "Storm\nTemple" as cult1 
+MINOR(cult1, "Storm\nTemple")
 
-component "Earth\nTemple" as cult2 
+MINOR(cult2, "Earth\nTemple")
 
 
 clan --> cult1 : has
@@ -192,7 +178,7 @@ clan --> cult2 : has
 actor "Chieftan" as chief
 
 
-component "Shrine" as shrine
+SHRINE(shrine, "Shrine")
 
 }
 
@@ -234,30 +220,19 @@ home <.. deity:  lives at
 
 frame Rules {
 
-storage  subcult1 [
-Subcult
----
-Orlanth
-Thunderous
-]
+RULES(runecult, "Orlanth")
+
+SUBRULES(subcult1, "Orlanth\nThunderous")
+
+RULES(runecult2, "Ernalda")
 
 
-storage runecult2 [
-Rune Cult
----
-Ernalda
-]
+SUBRULES(cp, "Chief Priest")
 
-
-storage "Chief Priest" as cp
 
 subcult1 <-> runecult2: cult association
 
-storage runecult [
-Rune Cult
----
-Orlanth
-]
+
 
 
 subcult1 --> runecult : variant of

@@ -1,7 +1,7 @@
 
 
 
-@startuml
+@startuml heler-subcult.png
 skinparam componentstyle rectangle
 
 !includeurl icons.puml
@@ -21,7 +21,7 @@ MINOR(cult, "Heler\nTemple")
 clan --> cult : has
 
 
-actor "Rune Lord" as chief #black
+actor "Rain Sword" as chief #black
 
 
 
@@ -55,27 +55,18 @@ wyter --> chief : bound to
 
 frame Rules {
 
-storage  subcult [
-Subcult
----
-Heler Rain Blade
-]
+RULES(runecult, "Heler")
+
+SUBRULES(subcult, "Heler Rainblade")
 
 
 
-
-storage runecult [
-Rune Cult
----
-Heler
-]
-
-
-subcult --> runecult : variant of
+subcult -> runecult : variant of
 
 
 }
 cult ..> subcult
 
+chief ..> subcult : rank of
 
 @enduml

@@ -1,4 +1,4 @@
-@startuml cults-tribes.svg
+@startuml rex-tribe.svg
 skinparam componentstyle rectangle
 skinparam actorStyle Hollow 
 !includeurl icons.puml
