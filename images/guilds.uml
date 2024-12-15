@@ -1,0 +1,130 @@
+
+@startuml craft-guild-cults.png
+
+!includeurl icons.puml
+
+GUILD(Alchemists)
+GUILD(Bakers)
+GUILD(Butchers)
+GUILD(Brewers)
+GUILD(Carpenters)
+HERDER(Cowgirls)
+GUILD(Jewelers)
+
+MERCHANT(Merchants)
+HERDER2(Horsebreeder)
+HERDER2(Horsemasters)
+GUILD(Potters)
+GUILD(Smiths)
+GUILD(Stonemasons)
+GUILD(Weavers)
+GUILD(Tanners)
+GUILD(Leatherworkers)
+
+SCRIBE(Scribes)
+
+GREAT(Issaries)
+GREAT(Ernalda)
+GREAT(Etyries)
+
+MAJOR(LM, "Lhankhor Mhy")
+SHRINE(Sartar)
+
+MINOR(Gustbran)
+MINOR(Eiritha)
+
+SHRINE(Aldrya)
+
+SHRINE(Waha)
+SHRINE(Hyalor)
+
+SHRINE(Minlister)
+SHRINE(Mahome)
+SHRINE(Hippoi)
+SHRINE(Asrelia)
+
+Alchemists -up- LM
+Bakers  -- Mahome
+Butchers -- Waha
+Brewers -up- Minlister
+Carpenters -- Aldrya
+Cowgirls -- Eiritha
+Horsemasters - Hyalor
+Merchants -- Issaries
+Potters -- Gustbran
+Smiths -- Gustbran
+Stonemasons -up- Sartar
+Weavers -- Ernalda
+Horsebreeder -up- Hippoi
+Jewelers -- Asrelia
+Ernalda -up- Aldrya
+
+Mahome - Ernalda
+
+Ernalda -- Minlister
+
+LM -up- Issaries
+
+Waha . Eiritha
+
+Ernalda -- Eiritha
+
+Etyries -- Merchants
+
+Issaries . Gustbran
+
+Ernalda -- Hippoi
+
+Hippoi .. Hyalor
+
+Issaries .. Sartar
+
+
+Ernalda . Sartar
+
+LM -- Scribes
+
+
+Asrelia -- Ernalda
+
+
+Tanners - Waha
+@enduml
+
+
+@startuml occupational-cults.png
+!includeurl icons.puml
+
+ENTERTAINER(Entertainers)
+GUILD(Shaman)
+rectangle "     <$movement_change*2>\nCharioteers" as Charioteers
+
+FISHER(Fisher)
+GUILD(Healer)
+HERDER(Herder)
+GUILD(Noble)
+GUILD(Thief)
+GUILD(Warrior)
+
+GREAT(Orlanth)
+GREAT(Ernalda)
+
+MAJOR(CA, "Chalana Arroy")
+MAJOR(Donandar)
+MAJOR(Humakt)
+MINOR(Engizi)
+SHRINE(DF, "Daka Fal")
+SHRINE(Mastakos)
+
+Warrior -- Humakt
+Entertainers -- Donandar
+
+Shaman - DF
+Healer - CA
+Fisher - Engizi
+
+
+Charioteers -- Mastakos
+Mastakos -- Orlanth
+
+@enduml

@@ -1,4 +1,4 @@
-#5.0 Tactical Gameplay
+# 5.0 Tactical Gameplay
 
 This section covers tactical gameplay in Rivers of Sartar. Unlike freefrom gameplay and ongoing contests, it draws mostly from Runequest rather than Questworlds and its predecessors, which have always treated combat as just another form of contest. While some people like that for its elegance, others find it too simple to allow interesting tactical decisions. And sometimes the best story is the one you tell after the fact, to try explain what everyone did.
 

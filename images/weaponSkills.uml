@@ -3,12 +3,12 @@
 
 skinparam rectangleFontSize 24
 
-rectangle "<$air>" as air
+rectangle "<$air*2.0>" as air
 
-rectangle "<$fire_sky>" as fire_sky
-rectangle "<$water>" as water
-rectangle "<$earth>" as earth
-rectangle "<$darkness>" as darkness
+rectangle "<$fire_sky*2.0>" as fire_sky
+rectangle "<$water*2.0>" as water
+rectangle "<$earth*2.0>" as earth
+rectangle "<$darkness*2.0>" as darkness
 
 
 darkness .. earth
@@ -20,7 +20,7 @@ air . water
 
 rectangle "Swords,\nDaggers" as sword
 rectangle "Hammers,\nMaces and Clubs" as club
-rectangle "Flexible Weapons" as net
+rectangle "Flexible \nWeapons" as net
 rectangle "Axes" as axe
 rectangle "Bows,\nCrossbows" as bow
 rectangle "Spear" as spear
