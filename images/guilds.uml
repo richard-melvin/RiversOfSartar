@@ -8,10 +8,9 @@ GUILD(Bakers)
 GUILD(Butchers)
 GUILD(Brewers)
 GUILD(Carpenters)
-HERDER(Cowgirls)
+HERDER(Herders)
 GUILD(Jewelers)
 
-MERCHANT(Merchants)
 HERDER2(Horsebreeder)
 HERDER2(Horsemasters)
 GUILD(Potters)
@@ -19,15 +18,12 @@ GUILD(Smiths)
 GUILD(Stonemasons)
 GUILD(Weavers)
 GUILD(Tanners)
-GUILD(Leatherworkers)
 
-SCRIBE(Scribes)
 
 GREAT(Issaries)
 GREAT(Ernalda)
-GREAT(Etyries)
 
-MAJOR(LM, "Lhankhor Mhy")
+SHRINE(LM, "Lhankhor\n    Mhy")
 SHRINE(Sartar)
 
 MINOR(Gustbran)
@@ -48,9 +44,8 @@ Bakers  -- Mahome
 Butchers -- Waha
 Brewers -up- Minlister
 Carpenters -- Aldrya
-Cowgirls -- Eiritha
+Herders -- Eiritha
 Horsemasters - Hyalor
-Merchants -- Issaries
 Potters -- Gustbran
 Smiths -- Gustbran
 Stonemasons -up- Sartar
@@ -69,7 +64,6 @@ Waha . Eiritha
 
 Ernalda -- Eiritha
 
-Etyries -- Merchants
 
 Issaries . Gustbran
 
@@ -77,12 +71,11 @@ Ernalda -- Hippoi
 
 Hippoi .. Hyalor
 
-Issaries .. Sartar
+Issaries .le. Sartar
 
 
 Ernalda . Sartar
 
-LM -- Scribes
 
 
 Asrelia -- Ernalda
@@ -96,35 +89,53 @@ Tanners - Waha
 !includeurl icons.puml
 
 ENTERTAINER(Entertainers)
-GUILD(Shaman)
 rectangle "     <$movement_change*2>\nCharioteers" as Charioteers
 
 FISHER(Fisher)
-GUILD(Healer)
-HERDER(Herder)
-GUILD(Noble)
-GUILD(Thief)
-GUILD(Warrior)
+HEALER(Healer)
+NOBLE(Noble)
+MERCHANT(Merchant)
+SCRIBE(Scribe)
 
-GREAT(Orlanth)
+GREAT(Orlanth, "Orlanth\n<i>Barntar</i>")
 GREAT(Ernalda)
+
+MAJOR(Issaries)
+
 
 MAJOR(CA, "Chalana Arroy")
 MAJOR(Donandar)
-MAJOR(Humakt)
+MAJOR(LM, "Lhankhor Mhy")
+
 MINOR(Engizi)
-SHRINE(DF, "Daka Fal")
 SHRINE(Mastakos)
 
-Warrior -- Humakt
 Entertainers -- Donandar
 
-Shaman - DF
-Healer - CA
-Fisher - Engizi
+Healer -up- CA
+Fisher -up- Engizi
+Merchant -up- Issaries
+
+Charioteers - Mastakos
+Mastakos - Orlanth
 
 
-Charioteers -- Mastakos
-Mastakos -- Orlanth
+Orlanth .. Issaries
+Orlanth .. CA
+
+Ernalda .. CA
+
+Noble -ri- Ernalda
+Noble -le- Orlanth
+
+Orlanth .. Engizi
+
+Ernalda .up. Donandar
+Orlanth .up. Donandar
+
+Orlanth .. LM
+
+LM -- Scribe
+
 
 @enduml

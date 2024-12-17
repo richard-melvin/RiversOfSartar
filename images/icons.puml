@@ -43,6 +43,7 @@ skinparam actorBackgroundColor black
 !includeurl $ICONURL/font-awesome-6/masks_theater.puml
 !includeurl $ICONURL/font-awesome-6/fish.puml
 !includeurl $ICONURL/material/local_hospital.puml
+!includeurl $ICONURL/font-awesome-5/ghost.puml
 
 
 !define SHRINE(_alias, _label) rectangle "<$monument*.7>\n_label" as _alias
@@ -77,6 +78,7 @@ skinparam actorBackgroundColor black
 !define NOBLE(_alias) rectangle "<$crown>\n_alias" as _alias
 !define FISHER(_alias) rectangle "<$fish>\n_alias" as _alias
 !define HEALER(_alias) rectangle "<$local_hospital>\n_alias" as _alias
+!define SHAMAN(_alias) rectangle "<$ghost>\n_alias" as _alias
 
 
 skinparam RectangleBorderColor  White
