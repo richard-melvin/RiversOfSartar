@@ -23,7 +23,7 @@ GUILD(Tanners)
 GREAT(Issaries)
 GREAT(Ernalda)
 
-SHRINE(LM, "Lhankhor\n    Mhy")
+MINOR(LM, "Lhankhor\n    Mhy")
 SHRINE(Sartar)
 
 MINOR(Gustbran)
@@ -58,7 +58,7 @@ Mahome - Ernalda
 
 Ernalda -- Minlister
 
-LM -up- Issaries
+LM .up. Issaries
 
 Waha . Eiritha
 

@@ -1,4 +1,4 @@
-@startuml engagement1.svg
+@startuml engagement1.png
 skinparam componentstyle rectangle
 skinparam actorStyle Hollow 
 

@@ -15,3 +15,8 @@ nochet
 esrolia
 elmal
 yelmalians
+tactical
+gameplay
+lethality
+unengaged
+outnumber
