@@ -19,11 +19,11 @@ air . water
 
 
 rectangle "Swords,\nDaggers" as sword
-rectangle "Hammers,\nMaces and Clubs" as club
+rectangle "Hammers,\nMaces" as club
 rectangle "Flexible \nWeapons" as net
 rectangle "Axes" as axe
 rectangle "Bows,\nCrossbows" as bow
-rectangle "Spear" as spear
+rectangle "Spears,\nClubs" as spear
 
 
 

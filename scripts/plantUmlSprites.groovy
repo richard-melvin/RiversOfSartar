@@ -32,8 +32,10 @@ final SPRITES_LISTING = new SpritesListing(new File('sprites-list.md'), PNGS_DIR
 
 def list = []
 
-def dir = new File("./fvtt/src/assets/images/runes")
-dir.eachFileRecurse (FileType.FILES) { file ->
+new File("./fvtt/src/assets/images/runes").eachFileRecurse (FileType.FILES) { file ->
+  list << file
+}
+new File("./fvtt/src/assets/images/weapons").eachFileRecurse (FileType.FILES) { file ->
   list << file
 }
 def scaleFactor = DEFAULT_SCALE

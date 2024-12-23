@@ -85,10 +85,10 @@ Tanners - Waha
 @enduml
 
 
-@startuml occupational-cults.png
+@startuml occupational-cults-1.png
 !includeurl icons.puml
 
-ENTERTAINER(Entertainers)
+ENTERTAINER(Entertainer)
 rectangle "     <$movement_change*2>\nCharioteers" as Charioteers
 
 FISHER(Fisher)
@@ -96,6 +96,9 @@ HEALER(Healer)
 NOBLE(Noble)
 MERCHANT(Merchant)
 SCRIBE(Scribe)
+PHILOSOPHER(Philosoper)
+
+THIEF(Thief)
 
 GREAT(Orlanth, "Orlanth\n<i>Barntar</i>")
 GREAT(Ernalda)
@@ -108,9 +111,16 @@ MAJOR(Donandar)
 MAJOR(LM, "Lhankhor Mhy")
 
 MINOR(Engizi)
-SHRINE(Mastakos)
+MINOR(AA, "Argan Argor")
+MINOR(Heler)
+MINOR(Uleria)
 
-Entertainers -- Donandar
+
+SHRINE(Mastakos)
+SHRINE(Eurmal)
+SHRINE(Lanbril)
+
+Donandar -le- Entertainer 
 
 Healer -up- CA
 Fisher -up- Engizi
@@ -136,6 +146,119 @@ Orlanth .up. Donandar
 Orlanth .. LM
 
 LM -- Scribe
+LM -- Philosoper
 
+Eurmal .. Orlanth
+
+Thief -- Eurmal 
+
+Lanbril - Thief
+
+Merchant -le- AA
+
+Fisher -le- Heler
+
+Uleria -- Entertainer
+Eurmal - Entertainer
+
+Heler . Engizi
+Orlanth .. Heler
 
 @enduml
+
+
+@startuml occupational-cults-2.png
+!includeurl icons.puml
+
+WARRIOR(Warrior)
+HUNTER(Hunter)
+FARMER(Farmer)
+BANDIT(Bandit)
+MOUNTAINEER(Mountaineer)
+
+
+GREAT(Orlanth, "Orlanth\n<i>Barntar</i>")
+GREAT(Ernalda)
+
+
+MAJOR(Humakt)
+MAJOR(SB, "Storm Bull")
+MAJOR(Yelmalio)
+MAJOR(BT, "Bloody Tusk")
+MAJOR(MG, "Maran Gor", grey)
+
+MINOR(BG, "Babeestor Gor")
+MINOR(AA, "Argan Argor")
+MINOR(Heler)
+MINOR(Valind, "Valind", grey)
+MINOR(Telmor)
+
+
+SHRINE(Odayla)
+MINOR(Yinkin)
+SHRINE(Gagarth)
+SHRINE(Ygg)
+
+Yinkin .up. Orlanth
+Odayla .up. Orlanth
+
+Hunter -up- Yinkin
+Hunter -up- Odayla
+
+Odayla . Yinkin
+
+Orlanth .[hidden] Ernalda
+
+
+Orlanth - Farmer
+Farmer - Ernalda
+
+Warrior --- Orlanth
+
+SB - Warrior
+Warrior -- Yelmalio
+
+
+Humakt -- Warrior
+
+Warrior - BG
+
+Ernalda .up. BG
+
+SB .. Orlanth
+
+AA -le- Warrior
+
+
+Farmer -- Heler
+
+Orlanth .. Heler
+
+Yelmalio .. Ernalda
+Yelmalio -- Farmer
+
+AA .. Ernalda
+
+
+Bandit - SB
+Bandit -- Orlanth
+Gagarth - Bandit
+Bandit -- Odayla
+
+Ygg . Orlanth
+
+Bandit -- Ygg
+
+Orlanth .. Valind
+Valind -- Mountaineer
+
+Telmor -- Hunter
+Bandit -- Telmor
+
+BT -- Bandit
+
+MG -- Bandit
+MG -- Warrior
+
+@enduml
+

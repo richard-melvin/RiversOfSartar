@@ -16,6 +16,7 @@ skinparam actorBackgroundColor black
 !includeurl ../sprites/movement_change.puml
 
 !$ICONURL = "../icons/icons"
+!$SPRITEURL = "../sprites"
 
 !include $ICONURL/common.puml
 !includeurl $ICONURL/govicons/washington_monument.puml
@@ -44,12 +45,25 @@ skinparam actorBackgroundColor black
 !includeurl $ICONURL/font-awesome-6/fish.puml
 !includeurl $ICONURL/material/local_hospital.puml
 !includeurl $ICONURL/font-awesome-5/ghost.puml
+!includeurl $ICONURL/font-awesome-6/graduation_cap.puml
+!includeurl $ICONURL/font-awesome-6/wheat_awn.puml
+!includeurl $ICONURL/font-awesome-6/mask.puml
+!includeurl $ICONURL/font-awesome-6/mountain.puml
 
+!includeurl $SPRITEURL/1h-sword.puml
+!includeurl $SPRITEURL/arrows.puml
+!includeurl $SPRITEURL/knife.puml
 
 !define SHRINE(_alias, _label) rectangle "<$monument*.7>\n_label" as _alias
 !define MINOR(_alias, _label) rectangle "<$landmark>\n_label" as _alias
 !define MAJOR(_alias, _label) rectangle "<$landmark_dome*1.4>\n_label" as _alias
 !define GREAT(_alias, _label) rectangle "<$place_of_worship*2>\n_label" as _alias
+
+!define SHRINE(_alias, _label, _color) rectangle "<$monument*.7,color=_color>\n_label" as _alias
+!define MINOR(_alias, _label, _color) rectangle "<$landmark,color=_color>\n_label" as _alias
+!define MAJOR(_alias, _label, _color) rectangle "<$landmark_dome*1.4,color=_color>\n_label" as _alias
+!define GREAT(_alias, _label, _color) rectangle "<$place_of_worship*2,color=_color>\n_label" as _alias
+
 
 !define SHRINE(_alias) SHRINE(_alias, "_alias")
 !define MINOR(_alias) MINOR(_alias, "_alias")
@@ -79,6 +93,13 @@ skinparam actorBackgroundColor black
 !define FISHER(_alias) rectangle "<$fish>\n_alias" as _alias
 !define HEALER(_alias) rectangle "<$local_hospital>\n_alias" as _alias
 !define SHAMAN(_alias) rectangle "<$ghost>\n_alias" as _alias
+!define WARRIOR(_alias) rectangle "<$1h-sword*2.5>\n_alias" as _alias
+!define HUNTER(_alias) rectangle "<$arrows*2>\n_alias" as _alias
+!define THIEF(_alias) rectangle "<$knife*2>\n_alias" as _alias
+!define PHILOSOPHER(_alias) rectangle "<$graduation_cap>\n_alias" as _alias
+!define FARMER(_alias) rectangle "<$wheat_awn>\n_alias" as _alias
+!define BANDIT(_alias) rectangle "<$mask>\n_alias" as _alias
+!define MOUNTAINEER(_alias) rectangle "<$mountain>\n_alias" as _alias
 
 
 skinparam RectangleBorderColor  White
