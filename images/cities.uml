@@ -4,11 +4,14 @@
 
 legend top right
 
-<$monument>  Shrine
-<$landmark>  Minor Temple
-<$landmark_dome>  Major Temple
-<$place_of_worship>  Great Temple
-
+      <$monument*.7>
+      Shrine
+      <$landmark>  
+      Minor Temple
+      <$landmark_dome*1.2>  
+      Major Temple
+      <$place_of_worship*1.5>  
+      Great Temple
 end legend
 
 @enduml

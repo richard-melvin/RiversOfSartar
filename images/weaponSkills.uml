@@ -3,12 +3,12 @@
 
 skinparam rectangleFontSize 24
 
-rectangle "<$air*2.0>" as air
+rectangle "<$air*2.0,color=CadetBlue>" as air
 
-rectangle "<$fire_sky*2.0>" as fire_sky
-rectangle "<$water*2.0>" as water
-rectangle "<$earth*2.0>" as earth
-rectangle "<$darkness*2.0>" as darkness
+rectangle "<$fire_sky*2.0,color=Salmon>" as fire_sky
+rectangle "<$water*2.0,color=MediumSeaGreen>" as water
+rectangle "<$earth*2.0,color=Sienna>" as earth
+rectangle "<$darkness*2.0,color=DarkSlateGray>" as darkness
 
 
 darkness .. earth

@@ -1,7 +1,42 @@
 
+@startuml legend-pantheons.svg
+
+!includeurl icons.puml
+
+
+rectangle "<$air*2,color=CadetBlue>\nAir" as air
+rectangle "<$earth*2,color=Sienna>\nEarth" as earth
+ 
+rectangle "<$water*2,color=MediumSeaGreen>\nWater" as water
+
+rectangle "<$fire_sky*2,color=Salmon>\nFire/Sky" as fire_sky
+rectangle "<$darkness*2,color=DarkSlateGray>\nDarkness" as darkness
+
+rectangle "<$moon_full*2,color=Plum>\nMoon" as moon
+
+
+
+fire_sky .. earth
+fire_sky .. darkness
+earth .. air
+darkness .. water
+air . water
+
+fire_sky .. moon
+earth . moon
+moon . darkness
+moon .. air
+moon .. water
+
+@enduml
+
+
 @startuml craft-guild-cults.png
 
 !includeurl icons.puml
+
+
+
 
 GUILD(Alchemists)
 GUILD(Bakers)
@@ -11,8 +46,8 @@ GUILD(Carpenters)
 HERDER(Herders)
 GUILD(Jewelers)
 
-HERDER2(Horsebreeder)
-HERDER2(Horsemasters)
+GUILD(Horsebreeder)
+GUILD(Horsemasters)
 GUILD(Potters)
 GUILD(Smiths)
 GUILD(Stonemasons)
@@ -21,23 +56,23 @@ GUILD(Tanners)
 
 
 GREAT(Issaries)
-GREAT(Ernalda)
+GREAT(Ernalda, "Ernalda", Sienna)
 
 MINOR(LM, "Lhankhor\n    Mhy")
 SHRINE(Sartar)
 
-MINOR(Gustbran)
-MINOR(Eiritha)
+MINOR(Gustbran, "Gustbran", Salmon)
+MINOR(Eiritha, "Eiritha", Sienna)
 
-SHRINE(Aldrya)
+SHRINE(Aldrya, "Aldrya", Sienna)
 
 SHRINE(Waha)
-SHRINE(Hyalor)
+SHRINE(Hyalor, "Hyalor", Salmon)
 
 SHRINE(Minlister)
-SHRINE(Mahome)
-SHRINE(Hippoi)
-SHRINE(Asrelia)
+SHRINE(Mahome, "Mahone", Salmon)
+SHRINE(Hippoi, "Hippoi", Salmon)
+SHRINE(Asrelia, "Asrelia", Sienna)
 
 Alchemists -up- LM
 Bakers  -- Mahome
@@ -89,7 +124,7 @@ Tanners - Waha
 !includeurl icons.puml
 
 ENTERTAINER(Entertainer)
-rectangle "     <$movement_change*2>\nCharioteers" as Charioteers
+CHARIOTEER(Charioteers)
 
 FISHER(Fisher)
 HEALER(Healer)
@@ -101,17 +136,17 @@ PHILOSOPHER(Philosoper)
 THIEF(Thief)
 
 GREAT(Orlanth, "Orlanth\n<i>Barntar</i>")
-GREAT(Ernalda)
+GREAT(Ernalda, "Ernalda", Sienna)
 
 MAJOR(Issaries)
 
 
 MAJOR(CA, "Chalana Arroy")
-MAJOR(Donandar)
+MAJOR(Donandar, "Donandar", Sienna)
 MAJOR(LM, "Lhankhor Mhy")
 
-MINOR(Engizi)
-MINOR(AA, "Argan Argor")
+MINOR(Engizi, "Engizi",MediumSeaGreen)
+MINOR(AA, "Argan Argar", DarkSlateGray)
 MINOR(Heler)
 MINOR(Uleria)
 
@@ -178,19 +213,19 @@ MOUNTAINEER(Mountaineer)
 
 
 GREAT(Orlanth, "Orlanth\n<i>Barntar</i>")
-GREAT(Ernalda)
+GREAT(Ernalda, "Ernalda", Sienna)
 
 
 MAJOR(Humakt)
 MAJOR(SB, "Storm Bull")
-MAJOR(Yelmalio)
-MAJOR(BT, "Bloody Tusk")
-MAJOR(MG, "Maran Gor", grey)
+MAJOR(Yelmalio, "Yelmalio", salmon)
+MAJOR(BT, "Bloody Tusk", Sienna)
+MAJOR(MG, "Maran Gor", Sienna)
 
-MINOR(BG, "Babeestor Gor")
-MINOR(AA, "Argan Argor")
+MINOR(BG, "Babeestor Gor", Sienna)
+MINOR(AA, "Argan Argar", DarkSlateGray)
 MINOR(Heler)
-MINOR(Valind, "Valind", grey)
+MINOR(Valind, "Valind")
 MINOR(Telmor)
 
 
