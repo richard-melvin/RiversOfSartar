@@ -1,0 +1,140 @@
+@startuml lunarEmpire.png
+!includeurl ../images/icons.puml
+
+cloud "Lunar Way" {
+
+MAJOR(Red, "Red Godess", Plum)
+MINOR(Emperor, "Red Emperor\n<i>Yelm Imperator</i>", Plum)
+GREAT(7M, "Seven Mothers", Plum)
+
+7M --> Red
+Red --> Emperor
+
+}
+
+cloud "Regimental Subcults" as Regiments 
+
+
+
+GREAT(Yelm, "Yelm", Salmon)
+
+MAJOR(IO, "Irripi Ontor", Plum)
+MAJOR(YT, "Yanafal Tarnils", Plum)
+MINOR(Deezola, "Deezola", Plum)
+
+MINOR(Jakaleel, "Jakaleel", Plum)
+MINOR(DX, "Danfive Xaron", Plum)
+
+
+MAJOR(Etyries, "Etyries", Plum)
+MAJOR(HonEel, "Hon-Eel", Plum)
+MAJOR(Hwarin, "Hwarin Dalthappa", Plum)
+MAJOR(Yara, "Yara Aranis", Plum)
+SHRINE(CB, "Crimson Bat", Plum)
+SHRINE(Hyalor, "Hyalor", Salmon)
+
+MAJOR(Dendara, "Dendara", Salmon)
+MINOR(Issaries)
+MINOR(LM, "Lhankhor Mhy")
+
+MINOR(Buserian, "Buserian", Salmon)
+
+MINOR(Yelmalio, "Yelmalio", Salmon)
+MINOR(Yelorna, "Yelorna", Salmon)
+
+
+
+SHRINE(Anilla, "Anilla", DarkSlateGray)
+MINOR(Gorgoma, "Gorgoma", Salmon)
+SHRINE(ZZ, "Zorak Zoran", DarkSlateGray)
+
+
+SHRINE(Gerra, "Gerra", Salmon)
+
+SHRINE(Ikadz, "Ikadz", Olive)
+
+SHRINE(Flamal, "Flamal", Sienna)
+
+7M .ri. IO
+YT .. 7M
+7M .le. Jakaleel
+7M .. DX
+7M .. Deezola
+
+
+7M .. HonEel
+
+7M .. Yara
+
+Etyries .. 7M
+Hwarin .. 7M
+
+
+
+CB .. 7M
+
+
+DX .. Ikadz
+Gerra .up. DX 
+
+Deezola .. Dendara
+Deezola .up. Gerra
+
+Etyries .up. Issaries 
+
+HonEel .. Dendara
+
+Flamal . HonEel
+Yara .. HonEel
+
+Yelorna .. Hwarin
+Yelmalio .. Hwarin
+Hwarin .up. Hyalor 
+
+IO .. Buserian
+
+Jakaleel .up. ZZ
+Jakaleel .up. Anilla
+Jakaleel .. Gorgoma
+
+
+Yara .up. Gorgoma
+Ikadz .. Yara 
+
+
+
+Dendara . Yelm
+
+Yelm -[thickness=2]up- Emperor
+
+
+LM -[thickness=2]up- Buserian
+
+
+GUILD(Artist)
+HEALER(Healer)
+NOBLE(Noble)
+MERCHANT(Merchant)
+SCRIBE(Scribe)
+WARRIOR(Warrior)
+FARMER(Farmer)
+
+Merchant -- Etyries
+
+Artist -- Hwarin
+
+Noble - Yelm
+Noble -up- Deezola
+
+IO - Scribe
+Deezola - Healer
+
+Warrior -- YT
+
+Warrior -- Hwarin
+
+HonEel -- Farmer
+
+
+Regiments -- YT
+@enduml

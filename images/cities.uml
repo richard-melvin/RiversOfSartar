@@ -91,30 +91,30 @@ Humakt .[hidden] Uleria
 
 title Furthest
 
-GREAT(SevenM, "Seven Mothers")
-GREAT(HonEel, "Hon-Eel")
-GREAT(market, "Etyries\nIssaries")
+GREAT(SevenM, "Seven Mothers", Plum)
+GREAT(HonEel, "Hon-Eel", Plum)
+GREAT(market, "Etyries\nIssaries", Plum)
 
-MAJOR(university, "Irripi Ontor\nLhankhor Mhy")
-MAJOR(yt, "Yanafal Tarnils")
-MAJOR(Ernalda, "Ernalda")
+MAJOR(university, "Irripi Ontor\nLhankhor Mhy", Plum)
+MAJOR(yt, "Yanafal Tarnils", Plum)
+MAJOR(Ernalda, "Ernalda", Sienna)
 MAJOR(Chalana,  "Chalana\n Arroy") 
-MAJOR(Oslira, "Oslira")
+MAJOR(Oslira, "Oslira", MediumSeaGreen)
 
-MINOR(Yelm, "Yelm\nImperator")
-MINOR(Yelmalio, "Yelmalio")
-MINOR(Lodril, "Lodril")
-MINOR(Gustbran, "Gustbran")
-MINOR(Uleria, "Uleria")
+MINOR(Yelm, "Yelm\nImperator", Salmon)
+MINOR(Yelmalio, "Yelmalio", Salmon)
+MINOR(Lodril, "Lodril", Salmon)
+MINOR(Gustbran, "Gustbran", Salmon)
+MINOR(Uleria, "Uleria", Sienna)
 
-SHRINE(Red, " Red\nGodess")
+SHRINE(Red, " Red\nGodess", Plum)
 SHRINE(Donandar, "Donandar")
 
-SHRINE(Asrelia, "Asrelia")
-SHRINE(BabGor, "Babeester Gor")
-SHRINE(MaranGor, "Maran Gor")
-SHRINE(TKT, "Ty Kora Tek")
-SHRINE(Voria, "Voria")
+SHRINE(Asrelia, "Asrelia", Sienna)
+SHRINE(BabGor, "Babeester Gor", Sienna)
+SHRINE(MaranGor, "Maran Gor", Sienna)
+SHRINE(TKT, "Ty Kora Tek", Sienna)
+SHRINE(Voria, "Voria", Sienna)
 
 
 
