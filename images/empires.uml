@@ -3,7 +3,7 @@
 
 cloud "Lunar Way" {
 
-MAJOR(Red, "Red Godess", Plum)
+MAJOR(Red, "Red Godess\n<i>Sedenya</i>", Plum)
 MINOR(Emperor, "Red Emperor\n<i>Yelm Imperator</i>", Plum)
 GREAT(7M, "Seven Mothers", Plum)
 
@@ -12,9 +12,57 @@ Red --> Emperor
 
 }
 
-cloud "Regimental Subcults" as Regiments 
+cloud "Regimental Subcults" as Regiments #lightgrey
+cloud Cities #lightgrey [
+Subject Gods
+---
+Alkor
+Charmain
+Denegoria
+Jajagappa
+Kalikos Icebreaker
+Kenstrata
+Oslira
+Raiba
+Third Eye Blue
+Yuthu
+]
+
+cloud Forms #Plum [
+Seven Ancient Forms
+---
+Lesilla
+Oragaria
+Natha
+Rashorana
+Ulurda
+Verithurusa
+Zaytenara
+]
+
+cloud Other #Plum [
+Other Lunar Gods
+---
+Glamour
+Twinstars
+Iphigios
+Kana Poor
+Naveria
+Nysalor
+She Who Waits
+Teelo Norri
+Young Elementals
+]
 
 
+cloud Demigods #Plum [
+Demigods
+---
+Great Sister
+Jar-Eel
+Red Dancer of Power
+Full Moon Corps
+]
 
 GREAT(Yelm, "Yelm", Salmon)
 
@@ -43,7 +91,6 @@ MINOR(Yelmalio, "Yelmalio", Salmon)
 MINOR(Yelorna, "Yelorna", Salmon)
 
 
-
 SHRINE(Anilla, "Anilla", DarkSlateGray)
 MINOR(Gorgoma, "Gorgoma", Salmon)
 SHRINE(ZZ, "Zorak Zoran", DarkSlateGray)
@@ -68,7 +115,6 @@ YT .. 7M
 
 Etyries .. 7M
 Hwarin .. 7M
-
 
 
 CB .. 7M
@@ -108,7 +154,7 @@ Dendara . Yelm
 Yelm -[thickness=2]up- Emperor
 
 
-LM -[thickness=2]up- Buserian
+LM -[thickness=2]le- Buserian
 
 
 GUILD(Artist)
@@ -118,6 +164,7 @@ MERCHANT(Merchant)
 SCRIBE(Scribe)
 WARRIOR(Warrior)
 FARMER(Farmer)
+ENTERTAINER(Entertainer)
 
 Merchant -- Etyries
 
@@ -134,7 +181,15 @@ Warrior -- YT
 Warrior -- Hwarin
 
 HonEel -- Farmer
-
+HonEel - Entertainer
 
 Regiments -- YT
+
+7M -- Other
+
+Red - Forms
+
+Emperor . Cities
+Other -- Demigods
+
 @enduml
