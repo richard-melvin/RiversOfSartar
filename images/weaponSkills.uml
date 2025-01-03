@@ -9,43 +9,62 @@ rectangle "<$fire_sky*2.0,color=Salmon>" as fire_sky
 rectangle "<$water*2.0,color=MediumSeaGreen>" as water
 rectangle "<$earth*2.0,color=Sienna>" as earth
 rectangle "<$darkness*2.0,color=DarkSlateGray>" as darkness
+rectangle "Spears,\nClubs,\nDaggers" as spear
 
 
-darkness .. earth
-darkness .. fire_sky
-earth .. air
-fire_sky .. water
-air . water
+darkness .. water
+darkness .. air
+darkness .. spear
 
+air . spear
+spear . water
 
-rectangle "Swords,\nDaggers" as sword
+water .. earth
+spear .. earth
+air .. fire_sky
+spear .. fire_sky
+
+fire_sky . earth
+
+rectangle "Swords" as sword
 rectangle "Hammers,\nMaces" as club
 rectangle "Flexible \nWeapons" as net
 rectangle "Axes" as axe
 rectangle "Bows,\nCrossbows" as bow
-rectangle "Spears,\nClubs" as spear
 
-
-
-air .. sword
+air .le. sword
 darkness .up. club
-water .. net
-earth .le. axe
+water . net
+earth .. axe
+fire_sky .. bow
 
-fire_sky . bow
-
-darkness .. spear
-earth . spear 
-spear . fire_sky
-spear .. air
-spear .. water
-
-
-rectangle "Pole Weapons" as pole
-rectangle Shields
-rectangle "Javelins,\nDarts" as javelin
-rectangle Unarmed
 rectangle Slings
+Slings . darkness
+Slings .. air
+
+rectangle "Javelins,\nDarts" as javelins
+air .. javelins
+javelins . fire_sky
+
+rectangle Shields
+fire_sky .. Shields
+earth .. Shields
+
+rectangle "Unarmed" as topright
+darkness . topright
+topright .. water
+
+rectangle "Pole Weapons" as bottomright
+
+earth . bottomright
+water .. bottomright
+
+@enduml
+
+
+
+
+
 
 pole . darkness
 pole .. earth
@@ -64,6 +83,5 @@ fire_sky .. Unarmed
 Unarmed .le. water
 
 
-@enduml
 
 

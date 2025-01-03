@@ -3,30 +3,33 @@
 
 !includeurl icons.puml
 
+skinparam rectangleFontSize 24
 
 rectangle "<$air*2,color=CadetBlue>\nAir" as air
-rectangle "<$earth*2,color=Sienna>\nEarth" as earth
+rectangle " <$earth*2,color=Sienna>\nEarth" as earth
  
-rectangle "<$water*2,color=MediumSeaGreen>\nWater" as water
+rectangle "  <$water*2,color=MediumSeaGreen>\nWater" as water
 
-rectangle "<$fire_sky*2,color=Salmon>\nFire/Sky" as fire_sky
-rectangle "<$darkness*2,color=DarkSlateGray>\nDarkness" as darkness
+rectangle "    <$fire_sky*2,color=Salmon>\nFire/Sky" as fire_sky
+rectangle "     <$darkness*2,color=DarkSlateGray>\nDarkness" as darkness
 
-rectangle "<$moon_full*2,color=Plum>\nMoon" as moon
+rectangle "  <$moon_full*2,color=Plum>\nMoon" as moon
 
 
 
-fire_sky .. earth
-fire_sky .. darkness
-earth .. air
 darkness .. water
-air . water
+darkness .. air
+darkness .. moon
 
-fire_sky .. moon
-earth . moon
-moon . darkness
-moon .. air
-moon .. water
+air . moon
+moon . water
+
+water .. earth
+moon .. earth
+air .. fire_sky
+moon .. fire_sky
+
+fire_sky . earth
 
 @enduml
 
