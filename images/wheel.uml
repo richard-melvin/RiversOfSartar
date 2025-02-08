@@ -1,0 +1,95 @@
+
+
+@startuml legend-pantheons.svg
+
+!includeurl icons.puml
+
+skinparam rectangleFontSize 24
+
+rectangle "<$air*2,color=CadetBlue>\nAir" as air
+rectangle " <$earth*2,color=Sienna>\nEarth" as earth
+ 
+rectangle "  <$water*2,color=MediumSeaGreen>\nWater" as water
+
+rectangle "    <$fire_sky*2,color=Salmon>\nFire/Sky" as fire_sky
+rectangle "     <$darkness*2,color=DarkSlateGray>\nDarkness" as darkness
+
+rectangle "  <$moon_full*2,color=Plum>\nMoon" as moon
+
+
+
+darkness .. water
+darkness .. air
+darkness .. moon
+
+air . moon
+moon . water
+
+water .. earth
+moon .. earth
+air .. fire_sky
+moon .. fire_sky
+
+fire_sky . earth
+
+@enduml
+
+
+
+@startuml legend-weapons.svg
+
+!includeurl icons.puml
+
+skinparam rectangleFontSize 24
+
+rectangle "<$air*2,color=CadetBlue>" as air
+rectangle "<$earth*2,color=Sienna>" as earth
+ 
+rectangle "<$water*2,color=MediumSeaGreen>" as water
+
+rectangle "<$fire_sky*2,color=Salmon>" as fire_sky
+rectangle "<$darkness*2,color=DarkSlateGray>" as darkness
+
+rectangle "<$man*2.0,color=Black>" as man
+rectangle "<$beast*2.0,color=Black>" as beast
+
+rectangle "<$death*2.0,color=Black>" as death
+rectangle "<$fertility*2.0,color=Black>" as fertility
+
+rectangle "<$movement_change*2.0,color=Black>" as movement
+rectangle "<$stasis*2.0,color=Black>" as stasis
+
+
+rectangle "<$disorder*2.0,color=Black>" as disorder
+rectangle "<$illusion*2.0,color=Black>" as illusion
+
+rectangle "<$luck*2.0,color=Black>" as luck
+rectangle "<$fate*2.0,color=Black>" as fate
+
+rectangle "<$law*2.0,color=Black>" as law
+
+darkness .. water
+darkness .. air
+darkness .. law
+
+air . law
+law . water
+
+water .. earth
+law .. earth
+air .. fire_sky
+law .. fire_sky
+
+fire_sky . earth
+
+water . illusion
+
+death . air
+
+disorder .. darkness
+
+
+fire_sky .. movement
+
+earth .. beast
+@enduml

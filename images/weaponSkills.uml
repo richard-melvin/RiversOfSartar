@@ -9,11 +9,20 @@ rectangle "<$fire_sky*2.0,color=Salmon>" as fire_sky
 rectangle "<$water*2.0,color=MediumSeaGreen>" as water
 rectangle "<$earth*2.0,color=Sienna>" as earth
 rectangle "<$darkness*2.0,color=DarkSlateGray>" as darkness
+
+rectangle "<$death*2.0,color=Black>" as death
+rectangle "<$beast*2.0,color=Black>" as beast
+rectangle "<$movement_change*2.0,color=Black>" as movement
+rectangle "<$disorder*2.0,color=Black>" as disorder
+rectangle "<$illusion*2.0,color=Black>" as illusion
+rectangle "<$man*2.0,color=Black>" as man
+
+
 rectangle "Spears,\nClubs,\nDaggers" as spear
 
 
-darkness .. water
-darkness .. air
+darkness .. water : Unarmed
+darkness .. air : Slings
 darkness .. spear
 
 air . spear
@@ -24,7 +33,7 @@ spear .. earth
 air .. fire_sky
 spear .. fire_sky
 
-fire_sky . earth
+fire_sky . earth 
 
 rectangle "Swords" as sword
 rectangle "Hammers,\nMaces" as club
@@ -50,14 +59,21 @@ rectangle Shields
 fire_sky .. Shields
 earth .. Shields
 
-rectangle "Unarmed" as topright
-darkness . topright
-topright .. water
+rectangle Unarmed
+darkness . Unarmed
+Unarmed .. water
 
-rectangle "Pole Weapons" as bottomright
+rectangle "Pole Weapons" as pole
 
-earth . bottomright
-water .. bottomright
+earth . pole
+water .. pole
+
+beast .. Unarmed
+
+
+death - sword
+
+net - illusion
 
 @enduml
 

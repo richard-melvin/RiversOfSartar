@@ -1,38 +1,4 @@
 
-@startuml legend-pantheons.svg
-
-!includeurl icons.puml
-
-skinparam rectangleFontSize 24
-
-rectangle "<$air*2,color=CadetBlue>\nAir" as air
-rectangle " <$earth*2,color=Sienna>\nEarth" as earth
- 
-rectangle "  <$water*2,color=MediumSeaGreen>\nWater" as water
-
-rectangle "    <$fire_sky*2,color=Salmon>\nFire/Sky" as fire_sky
-rectangle "     <$darkness*2,color=DarkSlateGray>\nDarkness" as darkness
-
-rectangle "  <$moon_full*2,color=Plum>\nMoon" as moon
-
-
-
-darkness .. water
-darkness .. air
-darkness .. moon
-
-air . moon
-moon . water
-
-water .. earth
-moon .. earth
-air .. fire_sky
-moon .. fire_sky
-
-fire_sky . earth
-
-@enduml
-
 
 @startuml craft-guild-cults.png
 

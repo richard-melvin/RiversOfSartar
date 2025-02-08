@@ -13,8 +13,28 @@ skinparam actorBackgroundColor black
 !includeurl ../sprites/water.puml
 !includeurl ../sprites/earth.puml
 !includeurl ../sprites/darkness.puml
-!includeurl ../sprites/movement_change.puml
 !includeurl ../sprites/moon_full.puml
+
+!includeurl ../sprites/death.puml
+!includeurl ../sprites/fertility.puml
+
+!includeurl ../sprites/beast.puml
+!includeurl ../sprites/man.puml
+
+!includeurl ../sprites/disorder.puml
+!includeurl ../sprites/harmony.puml
+
+!includeurl ../sprites/illusion.puml
+!includeurl ../sprites/truth.puml
+
+!includeurl ../sprites/movement_change.puml
+!includeurl ../sprites/stasis.puml
+
+!includeurl ../sprites/luck.puml
+!includeurl ../sprites/fate.puml
+
+
+!includeurl ../sprites/law.puml
 
 !$ICONURL = "../icons/icons"
 !$SPRITEURL = "../sprites"
