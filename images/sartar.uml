@@ -1,0 +1,121 @@
+@startuml sartar-tribes.svg
+skinparam componentstyle rectangle
+skinparam actorStyle Hollow 
+!includeurl icons.puml
+
+TRIBE(PolJoni, "Pol-Joni", DarkSlateGray)
+TRIBE(SunDome, "Sun Dome\n   County", DarkSlateGray) 
+
+CITY(Boldhome)
+
+CITY(Swenstown, Swenstown, Sienna)
+
+CITY(Jonstown, Jonstown, MediumSeaGreen)
+
+CITY(Wilmskirk, Wilmskirk, Salmon)
+
+TRIBE(Aranwyth, Aranwyth, Sienna)
+TRIBE(Balkoth, Balkoth, Sienna)
+TRIBE(Balmyr, Balmyr, Salmon)
+TRIBE(Cinsina, Cinsina, MediumSeaGreen)
+TRIBE(Colymar)
+TRIBE(Culbrea, Culbrea, MediumSeaGreen)
+TRIBE(Durulz)
+TRIBE(Dundealos, Dundealos, Sienna)
+TRIBE(Kheldon, Kheldon, Sienna)
+TRIBE(Kultain, Kultain, Salmon)
+TRIBE(Lismelder)
+TRIBE(Locaem, Balmyr, Salmon)
+
+TRIBE(Malani, Malani, MediumSeaGreen)
+TRIBE(Sambari, Sambari, Salmon)
+TRIBE(Telmori)
+TRIBE(Torkani, Torkani, MediumSeaGreen)
+
+
+Boldhome -up- Kheldon
+
+Swenstown -le- Kheldon
+Swenstown -up- Aranwyth
+Swenstown -ri- Balkoth
+Swenstown -do- Dundealos
+
+Wilmskirk -up- Balmyr
+Wilmskirk -- Kultain
+Wilmskirk -le- Locaem
+Wilmskirk -ri- Sambari
+
+
+Jonstown -up- Cinsina
+Jonstown -ri- Culbrea
+Jonstown -do- Malani
+
+
+Durulz .up. Lismelder
+Durulz .ri. Colymar
+Durulz .. Locaem
+Durulz .. SunDome
+Locaem .. SunDome
+
+Lismelder . Colymar
+Colymar .. Locaem
+
+Colymar .do. Balmyr
+
+Colymar .up. Malani
+
+
+Telmori .le. Cinsina
+Telmori .do. Culbrea
+Telmori .do. Aranwyth
+
+Telmori .up. Torkani
+
+
+Culbrea .do. Kheldon
+
+Telmori .ri. PolJoni
+Aranwyth .ri. PolJoni
+Balkoth .ri. PolJoni
+
+Sambari . Dundealos
+
+@enduml
+
+
+
+frame "Far Point" {
+
+CITY(Alone)
+
+CITY(AldaChur, "Alda-Chur")
+
+
+TRIBE(Amad)
+TRIBE(Bachad)
+TRIBE(Dinacoli)
+TRIBE(Princeros)
+TRIBE(Tovtaros)
+TRIBE(Tres)
+TRIBE(Vantaros)
+
+
+Amad -le- Alone
+Bachad -up- Alone
+Tres -do- Alone
+
+
+Tovtaros . Tres
+Dinacoli . Bachad
+Dinacoli .up. Tres
+
+
+Dinacoli -up- AldaChur
+Princeros -do- AldaChur
+Tovtaros -le- AldaChur
+Vantaros -ri- AldaChur
+
+}
+
+
+@enduml

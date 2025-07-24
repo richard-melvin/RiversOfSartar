@@ -126,7 +126,7 @@ SHRINE(Lanbril)
 
 Donandar -le- Entertainer 
 
-Healer -up- CA
+Healer -le- CA
 Fisher -up- Engizi
 Merchant -up- Issaries
 
@@ -168,6 +168,8 @@ Eurmal - Entertainer
 Heler . Engizi
 Orlanth .. Heler
 
+
+Ernalda -- Healer
 @enduml
 
 

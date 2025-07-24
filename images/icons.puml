@@ -53,6 +53,7 @@ skinparam actorBackgroundColor black
 !includeurl $ICONURL/font-awesome-6/book.puml
 !includeurl $ICONURL/font-awesome-6/book_open.puml
 !includeurl $ICONURL/font-awesome-6/book_bookmark.puml
+!includeurl $ICONURL/font-awesome-6/house.puml
 
 !includeurl $ICONURL/font-awesome-6/map.puml
 !includeurl $ICONURL/font-awesome-5/magic.puml
@@ -93,8 +94,13 @@ skinparam actorBackgroundColor black
 
 
 !define CLAN(_alias, _label) rectangle "<$people_group>\n_label" as _alias
-!define TRIBE(_alias, _label) rectangle "<$people_line>\n_label" as _alias
 !define HOMELAND(_alias, _label) rectangle "<$map>\n_label" as _alias
+!define CITY(_alias, _label, _color) rectangle "<$house*1.3,color=_color>\n_label" as _alias
+!define CITY(_alias, _label) CITY(_alias, _label, CadetBlue)
+!define CITY(_alias) CITY(_alias, "_alias")
+!define TRIBE(_alias, _label, _color) rectangle "<$people_line,color=_color>\n_label" as _alias
+!define TRIBE(_alias, _label) TRIBE(_alias, _label, CadetBlue)
+!define TRIBE(_alias) TRIBE(_alias, "_alias")
 
 !define RULES(_alias, _label) rectangle "<$book>\n_label" as _alias
 !define SUBRULES(_alias, _label) rectangle "<$book_open>\n_label" as _alias
