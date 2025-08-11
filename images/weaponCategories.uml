@@ -1,16 +1,26 @@
 
 @startmindmap meleeWeaponCategories.svg
 
-*_ Melee
-**_ Weapons
-***_ Axes
-****[#lightblue] Axe
+*_ Weapons
+
+**[#palegreen] 1H
+***[#lightblue] Dagger
+
+***[#lightblue] Shield
+
+**[#palegreen] 1H or 2H
+
+***[#lightblue] Axe
 
 
-***_ Hammers, Maces and Clubs
-****[#lightblue] Hammer
-****[#lightblue] Mace
-****[#lightblue] Quarterstaff
+***[#lightblue] Hammer
+***[#lightblue] Mace
+***[#lightblue] Spear
+***[#lightblue] Sword
+
+**[#palegreen] 2H
+
+***[#lightblue] Quarterstaff
 
 ***_ Flexible Weapons
 ****[#lightblue] Lasoo
@@ -20,51 +30,32 @@
 ***_ Pole Weapons
 ****[#lightblue] Pole-axe
 
-***_ Spears
-****[#lightblue] Spear
-***_ Swords and Daggers
-****[#lightblue] Dagger
-****[#lightblue] Sword
 ***_ Unarmed
 ****[#lightblue] Fist
-****[#lightblue] Grapple
-****[#lightblue] Improvised
 ****[#lightblue] Kick
+****[#lightblue] Bite
 
-**[#lightblue] Shields
 
 
-left side
+--[#palegreen] Projectile
+---[#lightblue] Sling
+---[#lightblue] Staff Sling
 
-**[#palegreen] 1H
-**[#palegreen] 2H
-**[#palegreen] Offhand
+---[#lightblue] Bow
+---[#lightblue] Crossbow
+---[#lightblue] Blowgun
 
-@endmindmap
+--[#palegreen] Thrown
 
-@startmindmap missileWeaponCategories.svg
- 
-*_ Ranged
-**[#palegreen] Projectile
-***_ Slings
-****[#lightblue] Sling
-****[#lightblue] Staff Sling
+---[#lightblue] Atalatl
+---[#lightblue] Javelin
 
-***_ Bows and Crossbows
-****[#lightblue] Bow
-****[#lightblue] Crossbow
-**[#palegreen] Thrown
-***_ Javelins, Spears and Darts
-****[#lightblue] Atalatl
-****[#lightblue] Javelin
-****[#lightblue] Blowgun
+---_ (Small) Thrown Weapons
+----[#lightblue] <i>many</i>
 
-***_ (Small) Thrown Weapons
-****[#lightblue] <i>many</i>
-
-***_ Flexible thrown Weapons
-****[#lightblue] Bola
-****[#lightblue] Net
+---_ Flexible thrown Weapons
+----[#lightblue] Bola
+----[#lightblue] Net
 
 
 

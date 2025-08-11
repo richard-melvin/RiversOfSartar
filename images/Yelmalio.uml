@@ -230,7 +230,7 @@ Ehilm -- Ralios
 
 actor Hippoi #black
 
-actor Redaylda<<Saird>> 
+actor Redaylda
 Saird -- Redaylda
 Redaylda -- Hippoi
 
@@ -247,9 +247,9 @@ Arandayla -- Hippoi
 
 Gamara -- Hippoi
 
-actor Galanin #black
-Sun --- Galanin
+actor Galanin 
 Galanin -- Ralios
+Yelm -- Galanin
 
 actor Galana
 Ralios -- Galana
