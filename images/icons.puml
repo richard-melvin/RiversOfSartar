@@ -71,6 +71,9 @@ skinparam actorBackgroundColor black
 !includeurl $ICONURL/font-awesome-6/wheat_awn.puml
 !includeurl $ICONURL/font-awesome-6/mask.puml
 !includeurl $ICONURL/font-awesome-6/mountain.puml
+!includeurl $ICONURL/font-awesome-6/gavel.puml
+!includeurl $ICONURL/font-awesome-6/sailboat.puml
+!includeurl $ICONURL/font-awesome-6/book_open_reader.puml
 
 !includeurl $SPRITEURL/1h-sword.puml
 !includeurl $SPRITEURL/arrows.puml
@@ -128,7 +131,9 @@ skinparam actorBackgroundColor black
 !define BANDIT(_alias) rectangle "<$mask,color=DarkGrey>\n_alias" as _alias
 !define MOUNTAINEER(_alias) rectangle "<$mountain,color=DarkGrey>\n_alias" as _alias
 !define CHARIOTEER(_alias) rectangle "<$movement_change*2,color=DarkGrey>\n_alias" as _alias
-
+!define JUDGE(_alias) rectangle "<$gavel,color=DarkGrey>\n_alias" as _alias
+!define SAILOR() rectangle "<$sailboat,color=DarkGrey>\nSailor" as Sailor
+!define MONK() rectangle "<$book_open_reader,color=DarkGrey>\nMonk" as Monk
 
 skinparam RectangleBorderColor  White
 skinparam RectangleBackgroundColor  White

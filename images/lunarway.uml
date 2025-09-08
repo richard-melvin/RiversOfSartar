@@ -1,0 +1,126 @@
+@startuml lunarWay.png
+!includeurl ../images/icons.puml
+
+
+MAJOR(Red, "Red Godess\n<i>Sedenya</i>", Plum)
+MINOR(Emperor, "Red Emperor", Plum)
+GREAT(7M, "Lunar Cults", Plum)
+
+7M --> Red
+Red --> Emperor
+
+
+
+cloud DaraHappa #Sienna [
+Dara Happan Gods
+---
+Lodril
+Antirius
+Erissa
+Donander
+Buserian
+Dayzatar
+Dendara
+Polaris
+Shargash
+Gogorma
+Lokarnos
+Ourania
+Gustbran
+Uleria
+]
+
+
+cloud Cities #lightgrey [
+Subject Gods
+---
+Alkor
+Charmain
+Denegoria
+Entekos
+Jajagappa
+Kalikos Icebreaker
+Kenstrata
+Pelora
+Oria
+Oslira
+Raiba
+Third Eye Blue
+Yuthu
+]
+
+cloud Forms #Plum [
+Seven Ancient Forms
+---
+<i>Lesilla</i>
+<i>Oragaria</i>
+<i>Natha</i>
+<i>Rashorana</i>
+<i>Ulurda</i>
+<i>Verithurusa</i>
+<i>Zaytenara</i>
+]
+
+cloud Other #Plum [
+Seven Mothers
+---
+Irripi Ontor
+Yanafal Tarnils
+Deezola
+Jakaleel
+Danfive Xaron
+<i>Teelo Norri</i>
+<i>She Who Waits</i>
+
+Three Inspirations
+---
+Glamour
+Yara Aranis
+Hon Eel
+
+Other Lunar Gods
+---
+Etyries
+Hwarin Dalthippa
+Iphigios
+Kana Poor
+Twinstars
+Naveria
+Nysalor
+Young Elementals
+]
+
+
+cloud Demigods #Plum [
+Living Demigods
+---
+Moonson
+Great Sister
+Crimson Bat
+Jar-Eel
+Red Dancer of Power
+Full Moon Corps
+]
+
+
+
+
+GREAT(Yelm, "Yelm", Salmon)
+
+7M - Other
+
+Red -up- Forms
+
+Yelm - Cities
+
+DaraHappa - Yelm
+
+Emperor <-[dotted]-> Yelm
+
+Emperor -> Demigods
+
+
+Demigods -up--> Other
+
+
+@enduml

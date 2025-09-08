@@ -56,33 +56,33 @@ Stonemasons -up- Sartar
 Weavers -- Ernalda
 Horsebreeder -up- Hippoi
 Jewelers -- Asrelia
-Ernalda -up- Aldrya
+Ernalda <.up.> Aldrya
 
-Mahome - Ernalda
+Mahome <.> Ernalda
 
-Ernalda -- Minlister
+Ernalda <..> Minlister
 
-LM .up. Issaries
+LM <.up.> Issaries
 
-Waha . Eiritha
+Waha <.> Eiritha
 
-Ernalda -- Eiritha
-
-
-Issaries . Gustbran
-
-Ernalda -- Hippoi
-
-Hippoi .. Hyalor
-
-Issaries .le. Sartar
+Ernalda <..> Eiritha
 
 
-Ernalda . Sartar
+Issaries <.> Gustbran
+
+Ernalda <..> Hippoi
+
+Hippoi <..> Hyalor
+
+Issaries <.le.> Sartar
+
+
+Ernalda <.> Sartar
 
 
 
-Asrelia -- Ernalda
+Asrelia <..> Ernalda
 
 
 Tanners - Waha
@@ -131,28 +131,28 @@ Fisher -up- Engizi
 Merchant -up- Issaries
 
 Charioteers - Mastakos
-Mastakos - Orlanth
+Mastakos <.> Orlanth
 
 
-Orlanth .. Issaries
-Orlanth .. CA
+Orlanth <..> Issaries
+Orlanth <..> CA
 
-Ernalda .. CA
+Ernalda <..> CA
 
 Noble -ri- Ernalda
 Noble -le- Orlanth
 
-Orlanth .. Engizi
+Orlanth <..> Engizi
 
 Ernalda .up. Donandar
-Orlanth .up. Donandar
+Orlanth <.up.> Donandar
 
-Orlanth .. LM
+Orlanth <..> LM
 
 LM -- Scribe
 LM -- Philosoper
 
-Eurmal .. Orlanth
+Eurmal <..> Orlanth
 
 Thief -- Eurmal 
 
@@ -165,8 +165,8 @@ Fisher -le- Heler
 Uleria -- Entertainer
 Eurmal - Entertainer
 
-Heler . Engizi
-Orlanth .. Heler
+Heler <.> Engizi
+Orlanth <..> Heler
 
 
 Ernalda -- Healer
@@ -205,13 +205,13 @@ MINOR(Yinkin)
 SHRINE(Gagarth)
 SHRINE(Ygg)
 
-Yinkin .up. Orlanth
-Odayla .up. Orlanth
+Yinkin <.up.> Orlanth
+Odayla <.up.> Orlanth
 
 Hunter -up- Yinkin
 Hunter -up- Odayla
 
-Odayla . Yinkin
+Odayla <.> Yinkin
 
 Orlanth .[hidden] Ernalda
 
@@ -229,21 +229,21 @@ Humakt -- Warrior
 
 Warrior - BG
 
-Ernalda .up. BG
+Ernalda <.up.> BG
 
-SB .. Orlanth
+SB <..> Orlanth
 
 AA -le- Warrior
 
 
 Farmer -- Heler
 
-Orlanth .. Heler
+Orlanth <..> Heler
 
-Yelmalio .. Ernalda
+Yelmalio <..> Ernalda
 Yelmalio -- Farmer
 
-AA .. Ernalda
+AA <..> Ernalda
 
 
 Bandit - SB
@@ -251,7 +251,7 @@ Bandit -- Orlanth
 Gagarth - Bandit
 Bandit -- Odayla
 
-Ygg . Orlanth
+Ygg <.> Orlanth
 
 Bandit -- Ygg
 

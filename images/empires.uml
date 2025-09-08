@@ -1,70 +1,13 @@
 @startuml lunarEmpire.png
 !includeurl ../images/icons.puml
 
-cloud "Lunar Way" {
 
-MAJOR(Red, "Red Godess\n<i>Sedenya</i>", Plum)
-MINOR(Emperor, "Red Emperor\n<i>Yelm Imperator</i>", Plum)
 GREAT(7M, "Seven Mothers", Plum)
 
-7M --> Red
-Red --> Emperor
-
-}
 
 cloud "Regimental Subcults" as Regiments #lightgrey
-cloud Cities #lightgrey [
-Subject Gods
----
-Alkor
-Charmain
-Denegoria
-Jajagappa
-Kalikos Icebreaker
-Kenstrata
-Oslira
-Raiba
-Third Eye Blue
-Yuthu
-]
-
-cloud Forms #Plum [
-Seven Ancient Forms
----
-Lesilla
-Oragaria
-Natha
-Rashorana
-Ulurda
-Verithurusa
-Zaytenara
-]
-
-cloud Other #Plum [
-Other Lunar Gods
----
-Glamour
-Twinstars
-Iphigios
-Kana Poor
-Naveria
-Nysalor
-She Who Waits
-Teelo Norri
-Young Elementals
-]
 
 
-cloud Demigods #Plum [
-Demigods
----
-Great Sister
-Jar-Eel
-Red Dancer of Power
-Full Moon Corps
-]
-
-GREAT(Yelm, "Yelm", Salmon)
 
 MAJOR(IO, "Irripi Ontor", Plum)
 MAJOR(YT, "Yanafal Tarnils", Plum)
@@ -78,7 +21,6 @@ MAJOR(Etyries, "Etyries", Plum)
 MAJOR(HonEel, "Hon-Eel", Plum)
 MAJOR(Hwarin, "Hwarin Dalthappa", Plum)
 MAJOR(Yara, "Yara Aranis", Plum)
-SHRINE(CB, "Crimson Bat", Plum)
 SHRINE(Hyalor, "Hyalor", Salmon)
 
 MAJOR(Dendara, "Dendara", Salmon)
@@ -111,50 +53,45 @@ YT .. 7M
 
 7M .. HonEel
 
-7M .. Yara
+7M . Yara
 
-Etyries .. 7M
+
+Etyries .do. 7M
 Hwarin .. 7M
-
-
-CB .. 7M
 
 
 DX .. Ikadz
 Gerra .up. DX 
 
-Deezola .. Dendara
+Deezola ..> Dendara
 Deezola .up. Gerra
 
-Etyries .up. Issaries 
+Etyries .up.> Issaries 
 
-HonEel .. Dendara
+HonEel ..> Dendara
 
 Flamal . HonEel
-Yara .. HonEel
+Yara .le. HonEel
 
-Yelorna .. Hwarin
-Yelmalio .. Hwarin
+Yelorna <.. Hwarin
+Yelmalio <.. Hwarin
 Hwarin .up. Hyalor 
 
-IO .. Buserian
+IO ..> Buserian
 
 Jakaleel .up. ZZ
 Jakaleel .up. Anilla
-Jakaleel .. Gorgoma
+Jakaleel ..> Gorgoma
 
 
-Yara .up. Gorgoma
+Yara .up.> Gorgoma
 Ikadz .. Yara 
 
 
 
-Dendara . Yelm
-
-Yelm -[thickness=2]up- Emperor
 
 
-LM -[thickness=2]le- Buserian
+LM <.[dotted]up.> Buserian
 
 
 GUILD(Artist)
@@ -165,13 +102,12 @@ SCRIBE(Scribe)
 WARRIOR(Warrior)
 FARMER(Farmer)
 ENTERTAINER(Entertainer)
-
+SHAMAN(Shaman)
 Merchant -- Etyries
 
 Artist -- Hwarin
 
-Noble - Yelm
-Noble -up- Deezola
+Noble - Deezola
 
 IO - Scribe
 Deezola - Healer
@@ -181,15 +117,24 @@ Warrior -- YT
 Warrior -- Hwarin
 
 HonEel -- Farmer
-HonEel - Entertainer
+HonEel -up- Entertainer
 
 Regiments -- YT
 
-7M -- Other
+MINOR(Polaris, "Polaris", Sienna)
+MINOR(Shargash, "Shargash", Sienna)
+MINOR(Yelm, "Yelm", Sienna)
+MINOR(Humakt)
 
-Red - Forms
+Polaris <.. Regiments
+Shargash <.. Regiments
+Yelm <.. Regiments
+Humakt <.. Regiments
 
-Emperor . Cities
-Other -- Demigods
 
+Shaman - Jakaleel
 @enduml
+
+
+
+

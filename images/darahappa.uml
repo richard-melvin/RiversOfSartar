@@ -1,5 +1,5 @@
 
-@startumldara-happa.png
+@startuml dara-happa.png
 !includeurl icons.puml
 
 ENTERTAINER(Entertainer)
@@ -10,34 +10,141 @@ MERCHANT(Merchant)
 SCRIBE(Scribe)
 GUILD(Crafter)
 
+JUDGE(Judge)
+FISHER(Fisher)
+
+WARRIOR(Warrior)
+FARMER(Farmer)
+SAILOR()
+MONK()
+
+GREAT(Yelm, "      Yelm", Salmon)
+GREAT(Lodril, "       Lodril", Salmon)
+
+MAJOR(Antirius, "Antirius\n<i>(Yelmalio)</i>", Salmon)
+
+
+MAJOR(CA, "      Erissa\n<i>(Chalana Arroy)</i>", Salmon)
+MINOR(Donandar, "Donandar", Salmon)
+MAJOR(LM, "Buserian\n<i>(Lhankhor Mhy)</i>", Salmon)
+MINOR(Dayzatar, "Dayzatar", Salmon)
+MINOR(Entekos)
+MAJOR(Dendara, "Dendara", Salmon)
+MAJOR(Polaris, "Polaris", Salmon)
+MAJOR(Shargash, "Shargash", Salmon)
+MINOR(Oslira, "Oslira",MediumSeaGreen)
+
+SHRINE(Gogorma, "Gogorma", Pink)
+MINOR(Lokarnos, "Lokarnos", Salmon)
+MINOR(Ourania, "Ourania", Salmon)
+MINOR(Yelorna, "Yelorna", Salmon)
+MINOR(Gustbran, "Gustbran", Salmon)
+MINOR(Oria, "Oria", Sienna)
+MINOR(Uleria, "Uleria", Sienna)
+MINOR(Pelora, "Pelora", Sienna)
+
+Donandar -up- Entertainer 
+
+Healer -do- CA
+
+
+LM -up- Scribe
+LM <-> CA
+
+Yelm - Noble
+Yelm .up[hidden]. Donandar
+Yelm .up[hidden]. CA
+Yelm .up[hidden]. LM
+Yelm -le- Warrior
+Yelm <..> Oslira
+Yelm .[hidden]. Antirius
+
+Oslira -- Fisher
+Oslira -- Sailor
+
+
+Dendara -le- Noble
+Dendara <..> Lodril
+
+Entekos -- Farmer
+
+
+Warrior -le- Polaris
+Warrior -- Shargash
+Warrior -- Yelorna
+Warrior -- Antirius
+
+Lodril .up[hidden]. Yelm
+
+
+Ourania <..> Dayzatar
+Ourania <..> Dendara
+
+Gogorma <.le.> Dendara
+
+Dendara <--> Entekos
+
+Dayzatar .[hidden]. Yelm
+
+
+Lodril - Farmer
+
+Lodril <..> Lokarnos
+
+Lokarnos -- Merchant
+
+
+Lodril .. Gustbran
+
+Gustbran -- Crafter
+
+Farmer -- Oria
+
+Uleria -le- Entertainer
+
+Farmer -- Pelora
+
+Judge -up- Antirius
+
+Uleria .[hidden]. Gogorma
+
+
+Monk - Ourania
+Monk -- Dayzatar
+
+
+
+@enduml
+
+
+@startuml kralorela.png
+!includeurl icons.puml
+
+ENTERTAINER(Entertainer)
+
+HEALER(Healer)
+NOBLE(Noble)
+SCRIBE(Scribe)
+
 
 WARRIOR(Warrior)
 FARMER(Farmer)
 
-GREAT(Yelm, "      Yelm/Antirius\n<i>HeenMaroun/Yanoor</i>", Sienna)
+GREAT(Yelm, "      Yelm\n<i>HeenMaroun/Yanoor</i>", Sienna)
 GREAT(Lodril, "       Lodril\n<i>   Huocheng</i>", Sienna)
 
-MAJOR(Yelmalio, "Yelmalio\n<i>Metsyla</i>", Sienna)
+MINOR(Yelmalio, "Antirius\n<i>Metsyla</i>", Sienna)
 
 
 MAJOR(CA, "    Erissa\n<i>Serelaloon</i>", Sienna)
-MAJOR(Donandar, "Donandar", Sienna)
 MAJOR(LM, "Buserian\n<i>Yedere</i>", Sienna)
 MAJOR(Dayzatar, "Dayzatar\n<i>TarnGatHa</i>", Sienna)
-MAJOR(Entekos)
 MAJOR(Dendara, "Dendara\n<i>Halisayan", Sienna)
-MAJOR(Polaris, "Polaris", Sienna)
-MAJOR(Shargash, "Shargash", Sienna)
 
 MINOR(Gogorma, "Gogorma\n<i>Bodkarta</i>", Sienna)
-MINOR(Lokarnos, "Lokarnos", Sienna)
-MINOR(Ourania, "Ourania", Sienna)
-MINOR(Yelorna, "Yelorna", Sienna)
-MINOR(Gustbran, "Gustbran", Sienna)
-MINOR(Oria, "Pelora/Oria\n<i>Miyo</i>")
+MINOR(Oria, "Oria\n<i>Miyo</i>")
 MINOR(Uleria, "Uleria\n<i>Okeria</i>")
 
-Donandar -up- Entertainer 
 
 Healer -do- CA
 
@@ -46,8 +153,7 @@ LM -le- Scribe
 
 
 Yelm - Noble
-Yelm -- Warrior
-Yelm .up. Donandar
+Yelm -- Yelmalio
 Yelm .up. CA
 
 Yelm .le. LM
@@ -56,40 +162,33 @@ Yelm .le. LM
 Dendara -le- Noble
 
 
-Entekos -- Farmer
-
-
-Warrior -- Polaris
-Warrior -- Shargash
-Warrior -- Yelmalio 
-Yelmalio -- Yelorna
 
 Lodril .up. Yelm
 
 
-Ourania .. Dayzatar
 
 Gogorma .. Dendara
 
-Dendara .. Entekos
 
 Dayzatar .. Yelm
 
 
 Lodril - Farmer
 
-Lodril .. Lokarnos
-
-Lokarnos -- Merchant
 
 
-Lodril .. Gustbran
-
-Gustbran .. Crafter
 
 Farmer - Oria
 
 Uleria - Entertainer
 
+
+Yelmalio - Warrior
+
+
+
 @enduml
+
+
+
 
