@@ -1,0 +1,91 @@
+@startuml scaling.png
+
+
+mode compact
+
+scale 10 as 50 pixels
+
+concise "Animals" as A
+
+concise "Dinosaurs" as D
+
+concise "Monsters" as M
+
+concise "NPCs" as NPC
+
+concise "PC" as GPC
+
+
+
+@M
+30 is Broo
+50 is Griffin
+70 is Revenant
+90 is "Wyvern"
+110 is Terror
+150 is {hidden}
+
+@D 
+40 is Pteradon
+
+60 is Elasmosaur
+
+80 is Triceratops
+
+100 is {hidden}
+
+@A
+25 is Deer
+40 is Cattle
+60 is Lion
+80 is {hidden}
+
+@NPC
+
+50 is Militia
+70 is Warrior
+90 is Bodyguard
+120 is "Thunder\nBrother"
+140 is Ironhoof
+160 is {hidden}
+
+@GPC
+
+20 is Starting
+90 is Experienced
+125 is "Experienced (RQ:G)"
+
+@enduml
+
+@startuml scaling2.png
+scale 10 as 50 pixels
+
+concise "Rune" as RM
+concise "Spirit" as SM
+concise "Sorcery" as SOR
+
+@RM
+
+50 is Cast
+95 is Meditative
+120 is Ritual
+195 is {hidden}
+
+@SM
+
+0 is {hidden}
+15 is Cast
+110 is Meditative
+135 is Ritual
+210 is {hidden}
+
+
+@SOR
+
+5 is Cast
+125 is Meditative
+150 is Ritual
+225 is Sympathetic
+300 is {hidden}
+
+@enduml

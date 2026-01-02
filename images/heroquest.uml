@@ -1,0 +1,37 @@
+@startuml heroquest.png
+
+skinparam actorStyle Hollow 
+skinparam actorBackgroundColor black
+box "Physical World"
+actor PC
+
+participant "Rune Pool" as pool
+
+end box
+
+box "Other Side"
+
+participant Spirit
+
+participant Deity
+
+
+end box
+
+group Spirit Magic
+
+PC -> Spirit : magical energy
+
+return : spell effect
+
+end group
+
+
+group Rune Magic
+
+PC -> Spirit : worship
+
+Spirit -> Deity 
+
+
+@enduml

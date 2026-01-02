@@ -1,0 +1,101 @@
+
+@startuml feeds-the-tribe.png
+
+hide empty description
+
+state "Defeat by Daga" as Daga #indianred
+
+state "Meeting with Elves" as elves #lightgreen
+
+state Underworld #silver {
+state "Maran Gor" as maran #indianred
+state "Ty Kora Tek" as tkt #lightgreen
+state "Babeester Gor" as bg #indianred
+
+}
+[*] -> Daga
+
+Daga -> elves
+elves -> maran
+maran -> tkt
+tkt -> bg
+
+
+bg -> [*]
+@enduml
+
+
+@startuml feeds-the-tribe-2.png
+
+start
+
+:Defeat by Daga;
+
+:Meet with Elves;
+
+
+:Persuade Maran Gor;
+:Negotiate with Ty Kora Tek;
+:Persuade Babeester Gor;
+
+end
+
+
+@enduml
+
+
+@startuml feeds-the-tribe-3.png
+
+hide empty description
+
+state "Daga" as Daga #indianred
+
+state "Meeting with Allies" as elves #lightgreen
+elves: Elves
+elves: Trolls
+elves: Dwarves
+
+
+state Underworld #silver {
+state "   First\nGuardian" as maran #indianred
+state "Ruler" as tkt #lightgreen
+state " Second\nGuardian" as bg #indianred
+
+state "Lost in Hell" as lost #steelblue
+
+state "Bottomless\n   Chasm" as chasm #steelblue
+
+state "Secret Door" as door #steelblue
+
+state "Denizen" as denizen #indianred
+
+}
+[*] -> Daga
+
+Daga -> elves : defeated
+elves -> maran : use boon
+maran -> tkt : identify as\n Maran Gor
+tkt -> bg : bargain with Ty Kora Tek
+
+
+bg -> [*] : identify as\nBabeestor Gor
+
+
+
+maran --> lost: evade
+bg --> lost: evade
+
+lost -up-> chasm
+
+chasm -up-> tkt : cross
+
+
+lost --> door
+
+door -> [*]
+
+lost -> denizen
+
+denizen -> lost
+
+@enduml
